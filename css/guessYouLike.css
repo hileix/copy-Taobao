@@ -1,0 +1,29 @@
+#guessYouLike{ float: left; margin: 20px 0 20px 80px; width: 1170px; padding-left: 20px; background: #fff; }
+#guessYouLike ul{ float: left; width: 1170px; }
+#guessYouLike li{ float: left; width: 224px; height: 304px; margin: 0 8px 28px 0; }
+#guessYouLike li a{ float: left; width: 224px; height: 304px; position: relative; }
+
+#guessYouLike .title{ padding-bottom: 10px; }
+#guessYouLike h2{ float: left; width: 254px; height: 18px; text-indent: 108px; font-size: 17px; font-weight: bold; color: #3C3C3C; margin: 17px 460px 4px 468px; background: url(../img/guessYouLike/bg.png); }
+#guessYouLike .title p{ width: 140px; font-size: 12px; margin-left: 539px; color: #999999; }
+
+#guessYouLike .content{ width: 224px; height: 304px; background: #F5F5F5; }
+#guessYouLike .content:hover img{ opacity: 0.5; }
+#guessYouLike .content img{
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#guessYouLike .content p{ float: left; margin: 8px 0 16px 13px; font-size: 12px; width: 200px; line-height: 18px; height: 36px; color: #6C6C6C;  }
+#guessYouLike .content .price{ float: left; margin-left: 14px; font-size: 12px; color: #FF4400; }
+#guessYouLike .content .count{ float: right; font-size: 12px; color: #9CA0AA; margin-right: 12px; }
+#guessYouLike .content .hot{ width: 33px; height: 15px; float: left; font-size: 10px; color: #fff; background: #FF4400; margin-left: 14px; text-align: center; }
+
+#guessYouLike .wrap{ width: 222px; height: 302px; position: absolute; left: 1px; top: 1px; }
+#guessYouLike .wrap:hover{ border: 1px solid #FF4400; left: 0; top: 0; }
+#guessYouLike .wrap:hover .shade,#guessYouLike .wrap:hover .seeMore{ display: block; }
+#guessYouLike .shade{ position: absolute; left: 0px; top: 220px; width: 222px; height: 83px; background: #FF6700; display: none; }
+#guessYouLike .seeMore{ width: 122px; height: 44px; position: absolute; left: 50px; top: 243px; background: url(../img/guessYouLike/seeMoreBg.png); display: none;  }
+#guessYouLike .seeMore h3{ float: left; margin-left: 34px; font-size: 17px; color: #fff; width: 86px; }
+#guessYouLike .seeMore p{ float: left; margin-top: 11px; font-size: 12px; color: #fff; }
+#guessYouLike .end{ width: 1170px; height: 26px; float: left; margin-left: 473px; font-size: 18px; font-weight: bold; text-indent: 95px; color: #CCCCD0; background: url(../img/guessYouLike/end.png) no-repeat; }

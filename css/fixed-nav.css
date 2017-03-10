@@ -1,0 +1,82 @@
+.fixed-nav{ width: 50px; height: 392px; margin: 20px 0 0 20px; position: absolute; top: 489px; right: 19px; background-color: #fff; }
+.fixed-nav li{ display: inline-block; width: 50px; height: 48px; text-align: center; background: #fff; }
+.fixed-nav li:hover a{ color: #fff; border: none; margin-top: 1px; }
+.fixed-nav li a{ display: inline-block; font-size: 14px; font-weight: bold; width: 30px; line-height: 50px; padding: 0 4px 0 4px; border-top: 1px solid #EFEFEF; }
+
+.fixed-nav .often a,.fixed-nav .guess-like a,.fixed-nav .report a,.fixed-nav .top-span{ font-size: 12px; line-height: 16px; padding-top: 10px; padding-bottom: 6px; }
+
+.fixed-nav .often a{  color: #FF4400; border: none;  }
+
+.fixed-nav .often{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .fashion{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .quality{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .feature{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .benefits{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .guess-like{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .top{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .couple-back{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .report{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.fixed-nav .often:hover{ background: #FF4400; }
+.fixed-nav .fashion a{ color: #FF0055; }
+.fixed-nav .fashion:hover{ background: #FF0055; }
+.fixed-nav .quality a{ color: #8D7AFB; }
+.fixed-nav .quality:hover{ background: #8D7AFB; }
+.fixed-nav .feature a{ color: #AEC413; }
+.fixed-nav .feature:hover{ background: #AEC413; }
+.fixed-nav .benefits a{ color: #A2745B; }
+.fixed-nav .benefits:hover{ background: #A2745B; }
+.fixed-nav .guess-like a{ color: #FF4400; }
+.fixed-nav .guess-like:hover{ background: #FF4400; }
+.fixed-nav .couple-back a,.fixed-nav .report a,.fixed-nav .top a{ font-weight: normal; color: #000; }
+.fixed-nav .couple-back:hover,.fixed-nav .report:hover{ background-color: #FF4400; }
+.fixed-nav .top:hover{ background-color: #FF4400; }
+
+.fixed-nav .top{ display: none; }
+.fixed-nav .top a{ float:left; width: 38px; height: 48px; }
+.fixed-nav .arrows{ display: inline-block; width: 34px; height: 20px; line-height: 20px; position: relative; top: -14px; }
+.fixed-nav .top-span{ display: inline-block; width: 34px; height: 28px; padding: 0; margin: 0; line-height: 28px; position: relative; top: -40px; }

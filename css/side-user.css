@@ -1,0 +1,12 @@
+/*右边side-user样式*/
+.user{ width:290px; height:130px; margin-top: 25px; /*border:1px solid red;*/  background:#F1F1F1; position:relative; }
+.user .bg-1{ display:inline-block; width:60px; height:60px; background:url(../img/side/1.png) no-repeat center top; position:absolute; left:115px; }
+.user .p-1{ position:absolute; left:124px; top:64px; font-size:12px; color:#3C3C3C; }
+.user .p-2{ position:absolute; left:54px; top:84px; font-size:12px; line-height:16px; }
+.user .p-2 a{ color:#FF4400; }
+.user .p-2 span,.user .p-2 a{ display:inline-block; margin:0 2px 0 2px; line-height:16px; }
+.user .p-2 .bg-2{ /*display:inline-block;*/ width:16px; height:16px; background:url(../img/side/2.png) no-repeat; position:relative; top:3px; }
+.user ul{ position:absolute; left:25px; bottom:0; }
+.user ul li{ float:left; background:#FF4400; line-height:25px; text-align:center; margin-right:8px; }
+.user ul li a{ display:inline-block; width:75px; height:25px; font-size:14px; color:#fff; font-weight:bold; }
+.user ul li:hover{ background:#F22D00; }

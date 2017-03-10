@@ -1,0 +1,38 @@
+/*搜索栏样式！！！！！！！！！！！！！*/
+.search{ display: inline-block; width:658px; height:86px; font-size:12px; position:relative; margin-top: 30px; }
+.search form{ display: inline-block; }
+.search .title a{ float:left; width:50px; height:25px; line-height:25px; text-align:center; color:#FF4400; }
+.search .title a:hover{ background:#F9E6E6; color:#C60000; }
+.search .title .active,.search .title .active:hover{ background:#FF5400; font-weight:bold; color:#fff; }
+
+.search .form{ float:left; width:626px; height:40px; position:relative; }
+.search .form .text{ float:left; outline:none; width:472px; height:34px; border:3px solid #FF5500; border-right:none; text-indent:12px; background:url(../img/search/1.png) no-repeat 13px 11px;  }
+.search .form .text-2,.search .form .text-3{ float:left; outline:none; width:500px; height:34px; border:3px solid #C60000; border-right:none; text-indent:12px; background:url(../img/search/2.png) no-repeat 13px 11px;  }
+.search .form .text-3{ border-color:#FF5500; }
+
+
+.search .form .wrap{ position:absolute; left:475px;  width:28px; height:34px; /*background:#eee;*/ border-top:3px solid #FF5500; border-bottom:3px solid #FF5500; }
+.search .form .icon-xiangji{ font-weight:bold; text-align:center; line-height:34px; }
+.search .form .icon-xiangji:hover{ color:#FF5010; }
+.search .form .file{ /*float:left;*/ position:absolute; left:0; outline:none; width:17px; height:13px; opacity:0; margin:6px 0 0 6px;  }
+/*提交按钮用绝对定位，这样，提交按钮就脱离文档流，file空间不会对其影响（本来file控件会延伸到提交按钮里面去，这样就不会了）*/
+.search .form .submit{ /*float:left;*/ position:absolute; left:475px; outline:none; width:122px; height:40px; background:#FF4200; border:none; font-size:17px; font-weight:bold; color:#fff; margin-left:28px; zoom:1; }
+.search .form .submit:hover{ background:#F52B00; cursor:pointer; }
+.search .adv-search{ float:left; width:24px; height:40px; margin-top:5px; padding-left:8px; }
+.search .adv-search:hover{ color:#FF4400; }
+
+.search ul{ margin-bottom:0; height:12px; }
+.search li{ float:left; height:12px; margin:9px 9px 0 0; }
+.search li a{ color:#666666; }
+.search li a:hover{ color:#FF4400; }
+.search .more{ margin-left:33px; }
+.search .hot{ color:#FF4400; }
+.search .hot-2{ color:#C60000; }
+.search .hot-2:hover{ color:#C60000; }
+
+/*第二个搜索框与第一个搜索框的不同样式*/
+.search .title .active-2,.search .title .active-2:hover{ background:#C60000; }
+.search .form .submit-2,.search .form .submit-2:hover{ background:#C40000; }
+/*将后两个搜索框定位*/
+.search .box-2,.search .box-3{ display: none; }
+.search .box-2,.search .box-3{ position:absolute; top:25px; }

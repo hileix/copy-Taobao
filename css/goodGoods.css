@@ -1,0 +1,24 @@
+#goodGoods{ display: inline-block; background: #fff; margin-top: 9px; }
+#goodGoods h2{ width: 290px; height: 36px; background: url(../img/goodGoods/bg.png) no-repeat 14px 10px #fff; }
+#goodGoods .cnontent{  }
+#goodGoods li{ width: 290px; height: 100px; background: #fff; margin-top: 10px; }
+#goodGoods li a{ width: 290px; height: 100px; }
+#goodGoods li *{ float: left; }
+#goodGoods li img{ width: 100px; height: 100px; margin: 0 10px 0 10px; }
+#goodGoods h3{ width: 160px; height: 14px; font-size: 14px; color: #3C3C3C; margin: 9px 0 10px 0; 
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#goodGoods li:hover h3{ color: #FF4400; }
+#goodGoods li p{ width: 155px; height: 40px; font-size: 12px; line-height: 20px; color: #666666; }
+#goodGoods span{ width: 160px; height: 12px; font-size: 12px; font-weight: bold; color: #73B2F5; margin-top: 9px; }
+#goodGoods .exchange{ display: inline-block; width: 290px; height: 39px; }
+#goodGoods .exchange:hover span,#goodGoods .exchange:hover p{ color: #FF4400; }
+#goodGoods .exchange span,#goodGoods .exchange p{
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#goodGoods .icon-shuaxin{ width: 16px; height: 16px; float: left; font-size: 16px; color: #666666; margin: 12px 0 0 98px; }
+#goodGoods .exchange p{ float: left; width: 70px; height: 14px; font-size: 14px; color: #666666; margin: 13px 0 0 6px; }

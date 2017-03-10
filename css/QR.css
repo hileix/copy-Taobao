@@ -1,0 +1,5 @@
+/*二维码样式！！！！！！*/
+.QR-code{ width:115px; height:114px; margin: 33px 0 0 152px;}
+.QR-code li{ float:left; }
+.QR-code .close{ display:inline-block; width:18px; height:18px; border:1px solid #EEEEEE; border-right:none; color:#EEEEEE; text-align:center; line-height:18px; }
+.QR-code img{ border:1px solid #EEEEEE; }

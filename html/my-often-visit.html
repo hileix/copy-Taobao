@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝often-visit</title>
+	<style>
+		*{ margin: 0; padding: 0; }
+		a{ text-decoration: none; }
+
+		.section{ width: 440px; height: 362px; display: inline-block; background: #fff; }
+		.section .left{ width: 100px; height: 362px; float: left; background: #459AC4; }
+		.section .right{ float: right; width: 338px; height: 358px; border: 2px solid #C6D3EC; border-left: none; font-size: 12px; }
+		.section .right:hover{ border-color: #406CC0; }
+		
+		.section .left .img-wrap{ display: inline-block; height: 100px; padding: 0; margin: 0; }
+		.section .left h3{ width: 92px;height: 19px; font-size: 14px; color: #fff; font-weight: bold; padding: 9px 0 0 8px; }
+		.section .left a{ display: inline-block; font-size: 12px; color: #fff; padding: 4px 8px; margin: 3px 0 0 8px; background: #6AAED0; }
+		.section .left a:hover{ background: #fff; color: #FF5500; }
+
+		.section .right a{ float: left; } 
+		/*解决a标签下有img标签时，img标签下面会有空隙的问题（a + img 在浏览器中会产生空白）*/
+		.section .right a img{ vertical-align: bottom; } 
+		.section .right .a-1,.section .right .a-2{ border-right: 1px solid #EFEFEF; }
+		.section .right .a-3,/*.section .right .a-4,*/.section .right .a-6{ border-bottom: 1px solid #EFEFEF; }
+		.section .right .a-3{ width: 136px; height: 98px; }
+		.section .right .a-4{ width: 136px; height: 101px; }
+		.section .right .a-5{ border-top: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF; width: 201px; height: 158px;}
+		.section .right .a-6{ width: 136px; height: 80px; position: relative; border-top: 1px solid #EFEFEF; }
+		.section .right .a-7{ width: 136px; height: 78px; position: relative; }
+		/*a-3*/
+		.section .right .a-3 .intro{ float: left; margin: 17px 0 0 6px; }
+		.section .right .a-3 img{ float: right; margin-top: 18px; }
+		.section .right .a-3 h3{ font-size: 12px; margin-bottom: 7px; }
+		.section .right .a-3:hover h3{ color: #FF4400; }
+		/*a-4*/
+		.section .right .a-4 .intro{ float: left; margin: 17px 0 0 6px; }
+		.section .right .a-4 img{ float: right; margin-top: 20px; }
+		.section .right .a-4 h3{ font-size: 12px; margin-bottom: 7px; }
+		.section .right .a-4:hover h3{ color: #FF4400; }
+		/*a-5*/
+		.section .right .a-5 .wrap-1{ width: 180px; height: 140px;margin: 10px 0 0 10px;  position: relative; overflow: hidden; }
+		.section .right .a-5 .wrap-move{ width: 180px; height: 87px; position: absolute; top: 116px; font-size: 12px; }
+		.section .right .a-5 h3{ float: left; font-size: 12px; font-weight: normal; width: 130px; height: 24px; background: #fff; opacity: 0.8; color: #000; line-height: 24px; text-align: center; }
+		.section .right .a-5:hover h3{ color: #FF4400; }
+		.section .right .a-5:hover .img-wrap{ background: #fff; opacity: 0.9; }
+		.section .right .a-5 span{ float: left; width: 50px; height: 24px; color: #fff; background: #459AC4; line-height: 24px; text-align: center; }
+		.section .right .a-5 p{ float: left; width: 174px; height: 62px; line-height: 20px; padding: 1px 0 0 6px; color: #666666; background: #fff; opacity: 0.8; }
+		/*a-6*/
+		.section .right .a-6 img{ margin: 8px 0 0 8px; }
+		.section .right .a-6 h3{ width: 120px; height: 20px; background: #fff; font-size: 12px; color: #3C3C3C; line-height: 20px; text-align: center; position: absolute; left: 8px; top: 53px; opacity: 0.8; font-weight: normal; }
+		.section .right .a-6:hover h3{ color: #FF4400; opacity: 1; }
+		/*a-7*/
+		.section .right .a-7 img{ margin: 8px 0 0 8px; }
+		.section .right .a-7 h3{ width: 120px; height: 20px; background: #fff; font-size: 12px; color: #3C3C3C; line-height: 20px; text-align: center; position: absolute; left: 8px; top: 53px; opacity: 0.8; font-weight: normal; }
+		.section .right .a-7:hover h3{ color: #FF4400; opacity: 1; }
+		
+		/*my-often-visit*/
+		.my-often-visit{ width: 889px; position: relative; }
+		.my-often-visit h2{ width: 220px; height: 20px; line-height: 20px; display: inline-block; font-size: 18px; color: #323232; background: url(img/my-often-visit/1.png) no-repeat; text-indent: 86px; margin-left: 340px;  }
+		.my-often-visit .more{ width: 60px; height: 20px; line-height: 20px; border-radius: 10px; color: #3C3C3C; font-size: 12px; background: #fff; text-align: center; position: absolute; right: 0; top: 5px;
+			-webkit-transition: all 0.2s ease;
+			-moz-transition: all 0.2s ease;
+			-o-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+		.my-often-visit .more:hover{ background: #FF4400; color: #fff; }
+		.section-1,.section-3,.section-4{ margin-top: 10px; }
+		.section-2{ /*margin-top: 4px;*/ }
+	</style>
+	<script src="js/move.js"></script>
+	<script>
+		window.onload = function(){
+			var oSection = document.getElementsByClassName('section')[0];
+			var oA_5 = document.getElementsByClassName('a-5')[0];
+			var oWrapMove = oSection.getElementsByClassName('wrap-move')[0];
+			oA_5.onmouseover = function(){
+				startMove(oWrapMove,{
+					top: 53
+				},4,13);
+			}
+			oA_5.onmouseout = function(){
+				startMove(oWrapMove,{
+					top: 116
+				},4,13);
+			}
+		}
+	</script>
+</head>
+	<body style="background: #F1F1F1;">
+		<div class="my-often-visit">
+			<h2>我常逛的</h2>
+			<a class="more" href="#">更多></a>
+			<div class="section section-1">
+				<div class="left">
+					<a class="img-wrap" href="#"><img src="img/often-visit/1.jpg" alt=""></a>
+					<h3>热门TOP</h3>
+					<a href="#">iPhone 6s</a>
+					<a href="#">看片神器</a>
+					<a href="#">自拍杆</a>
+					<a href="#">智能投影仪</a>
+					<a href="#">智能手环</a>
+					<a href="#">智能手表</a>
+					<a href="#">智能路由器</a>
+					<a href="#">智能机器人</a>
+					<a href="#">制氧器</a>
+				</div>
+				<div class="right">
+					<a class="a-1" href="#"><img src="img/often-visit/1-1.jpg" alt=""></a>
+					<a class="a-2" href="#"><img src="img/often-visit/1-2.jpg" alt=""></a>
+					<a class="a-3" href="#">
+						<div class="intro">
+							<h3>今有潮电</h3>
+							<p>等你来看</p>
+						</div>
+						<img src="img/often-visit/1-3.jpg" alt="">
+					</a>
+					<a class="a-4" href="#">
+						<div class="intro">
+							<h3>首发预约</h3>
+							<p>抢先有奖</p>
+						</div>
+						<img src="img/often-visit/1-4.jpg" alt="">
+					</a>
+					<a class="a-5" href="#">
+						<div class="wrap-1">
+							<div class="img-wrap">
+								<img src="img/often-visit/1-5.jpg" alt="">
+							</div>
+							
+							<div class="wrap-move">
+								<span>热门</span>
+								<h3>遥控仿真飞鸟</h3>
+								<p>完全参照雀鸟的飞行方式设计而成，马达驱动双翼拍打以产生上升的动力。</p>
+							</div>
+						</div>
+					</a>
+					<a class="a-6" href="#">
+						<img src="img/often-visit/1-6.jpg" alt="">
+						<h3>漫威蓝牙耳机</h3>
+					</a>
+					<a class="a-7" href="#">
+						<img src="img/often-visit/1-7.jpg" alt="">
+						<h3>奇葩大集合</h3>
+					</a>
+				</div>
+			</div>
+			<div class="section section-2">
+				<div class="left">
+					<a class="img-wrap" href="#"><img src="img/often-visit/1.jpg" alt=""></a>
+					<h3>热门TOP</h3>
+					<a href="#">iPhone 6s</a>
+					<a href="#">看片神器</a>
+					<a href="#">自拍杆</a>
+					<a href="#">智能投影仪</a>
+					<a href="#">智能手环</a>
+					<a href="#">智能手表</a>
+					<a href="#">智能路由器</a>
+					<a href="#">智能机器人</a>
+					<a href="#">制氧器</a>
+				</div>
+				<div class="right">
+					<a class="a-1" href="#"><img src="img/often-visit/1-1.jpg" alt=""></a>
+					<a class="a-2" href="#"><img src="img/often-visit/1-2.jpg" alt=""></a>
+					<a class="a-3" href="#">
+						<div class="intro">
+							<h3>今有潮电</h3>
+							<p>等你来看</p>
+						</div>
+						<img src="img/often-visit/1-3.jpg" alt="">
+					</a>
+					<a class="a-4" href="#">
+						<div class="intro">
+							<h3>首发预约</h3>
+							<p>抢先有奖</p>
+						</div>
+						<img src="img/often-visit/1-4.jpg" alt="">
+					</a>
+					<a class="a-5" href="#">
+						<div class="wrap-1">
+							<div class="img-wrap">
+								<img src="img/often-visit/1-5.jpg" alt="">
+							</div>
+							
+							<div class="wrap-move">
+								<span>热门</span>
+								<h3>遥控仿真飞鸟</h3>
+								<p>完全参照雀鸟的飞行方式设计而成，马达驱动双翼拍打以产生上升的动力。</p>
+							</div>
+						</div>
+					</a>
+					<a class="a-6" href="#">
+						<img src="img/often-visit/1-6.jpg" alt="">
+						<h3>漫威蓝牙耳机</h3>
+					</a>
+					<a class="a-7" href="#">
+						<img src="img/often-visit/1-7.jpg" alt="">
+						<h3>奇葩大集合</h3>
+					</a>
+				</div>
+			</div>
+			<div class="section section-3">
+				<div class="left">
+					<a class="img-wrap" href="#"><img src="img/often-visit/1.jpg" alt=""></a>
+					<h3>热门TOP</h3>
+					<a href="#">iPhone 6s</a>
+					<a href="#">看片神器</a>
+					<a href="#">自拍杆</a>
+					<a href="#">智能投影仪</a>
+					<a href="#">智能手环</a>
+					<a href="#">智能手表</a>
+					<a href="#">智能路由器</a>
+					<a href="#">智能机器人</a>
+					<a href="#">制氧器</a>
+				</div>
+				<div class="right">
+					<a class="a-1" href="#"><img src="img/often-visit/1-1.jpg" alt=""></a>
+					<a class="a-2" href="#"><img src="img/often-visit/1-2.jpg" alt=""></a>
+					<a class="a-3" href="#">
+						<div class="intro">
+							<h3>今有潮电</h3>
+							<p>等你来看</p>
+						</div>
+						<img src="img/often-visit/1-3.jpg" alt="">
+					</a>
+					<a class="a-4" href="#">
+						<div class="intro">
+							<h3>首发预约</h3>
+							<p>抢先有奖</p>
+						</div>
+						<img src="img/often-visit/1-4.jpg" alt="">
+					</a>
+					<a class="a-5" href="#">
+						<div class="wrap-1">
+							<div class="img-wrap">
+								<img src="img/often-visit/1-5.jpg" alt="">
+							</div>
+							
+							<div class="wrap-move">
+								<span>热门</span>
+								<h3>遥控仿真飞鸟</h3>
+								<p>完全参照雀鸟的飞行方式设计而成，马达驱动双翼拍打以产生上升的动力。</p>
+							</div>
+						</div>
+					</a>
+					<a class="a-6" href="#">
+						<img src="img/often-visit/1-6.jpg" alt="">
+						<h3>漫威蓝牙耳机</h3>
+					</a>
+					<a class="a-7" href="#">
+						<img src="img/often-visit/1-7.jpg" alt="">
+						<h3>奇葩大集合</h3>
+					</a>
+				</div>
+			</div>
+			<div class="section section-4">
+				<div class="left">
+					<a class="img-wrap" href="#"><img src="img/often-visit/1.jpg" alt=""></a>
+					<h3>热门TOP</h3>
+					<a href="#">iPhone 6s</a>
+					<a href="#">看片神器</a>
+					<a href="#">自拍杆</a>
+					<a href="#">智能投影仪</a>
+					<a href="#">智能手环</a>
+					<a href="#">智能手表</a>
+					<a href="#">智能路由器</a>
+					<a href="#">智能机器人</a>
+					<a href="#">制氧器</a>
+				</div>
+				<div class="right">
+					<a class="a-1" href="#"><img src="img/often-visit/1-1.jpg" alt=""></a>
+					<a class="a-2" href="#"><img src="img/often-visit/1-2.jpg" alt=""></a>
+					<a class="a-3" href="#">
+						<div class="intro">
+							<h3>今有潮电</h3>
+							<p>等你来看</p>
+						</div>
+						<img src="img/often-visit/1-3.jpg" alt="">
+					</a>
+					<a class="a-4" href="#">
+						<div class="intro">
+							<h3>首发预约</h3>
+							<p>抢先有奖</p>
+						</div>
+						<img src="img/often-visit/1-4.jpg" alt="">
+					</a>
+					<a class="a-5" href="#">
+						<div class="wrap-1">
+							<div class="img-wrap">
+								<img src="img/often-visit/1-5.jpg" alt="">
+							</div>
+							
+							<div class="wrap-move">
+								<span>热门</span>
+								<h3>遥控仿真飞鸟</h3>
+								<p>完全参照雀鸟的飞行方式设计而成，马达驱动双翼拍打以产生上升的动力。</p>
+							</div>
+						</div>
+					</a>
+					<a class="a-6" href="#">
+						<img src="img/often-visit/1-6.jpg" alt="">
+						<h3>漫威蓝牙耳机</h3>
+					</a>
+					<a class="a-7" href="#">
+						<img src="img/often-visit/1-7.jpg" alt="">
+						<h3>奇葩大集合</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

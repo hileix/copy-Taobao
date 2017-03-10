@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝右边side-announcement</title>
+	<style>
+		*{ margin:0; padding:0; }
+		a{ text-decoration:none; }
+		li{ list-style:none; }
+		.announcement{ width:290px; height:110px; margin:20px 0 0 20px; border-bottom:1px solid #EAEAEA; position:relative; }
+		.announcement a{ font-size:12px; color:#3C3C3C; }
+		.announcement a:hover{ color:#FF4400; }
+		.announcement .ul-1{ float:left; width:259px; height:79px; margin:13px 0 0 16px; }
+		.announcement .li-1{ float:left; width:39px; height:20px; text-align:center; margin-right:15px; }
+		.announcement .no-mr{ margin-right:0; }
+		.announcement .active-1{ border-bottom:2px solid #FF4400; font-weight:bold; }
+	
+		.announcement .ul-2{ display:none; float:left; width:258px; height:43px; margin-top:18px; position:absolute; left:16px; height:49px; }
+		.announcement .ul-2 li{ width:128px; height:18px; float:left; font-weight:normal; line-height:18px; }
+		.announcement .ul-2 li a{ float:left; display:inline-block; height:18px; line-height:18px; }
+		.announcement .ul-2 .mt{ margin-top:6px; }
+		.announcement .ul-2 .active-2{ color:#FF4400; }
+
+		.announcement .show{ display:block; }
+		.announcement .hide{ display:none; }
+
+	}
+	</style>
+	<script>
+		window.onload = function(){
+			var oAnnouncement = document.getElementsByClassName('announcement')[0];
+			var arrLi_1 = oAnnouncement.getElementsByClassName('li-1');
+			var aUl_2 = oAnnouncement.getElementsByClassName('ul-2');
+			var timer = null;
+			// 当鼠标悬停在第一级菜单200ms后，显示出其下面的二级菜单
+			for(var i=0; i<arrLi_1.length; i++){
+				arrLi_1[i].index = i;
+				arrLi_1[i].onmouseover = function(){
+					clearInterval(timer);
+					var This = this;
+					var index = this.index;
+					timer = setTimeout(function(){
+						//一级菜单显示情况
+						for(var i=0; i<arrLi_1.length; i++){
+							removeClass(arrLi_1[i],'active-1');
+						}
+						addClass(This,'active-1');
+						//二级菜单显示情况
+						for(var i=0; i<aUl_2.length; i++){
+							removeClass(aUl_2[i],'show')
+						}
+						addClass(aUl_2[index],'show');
+						},300)	
+				}
+			}
+
+		}
+		//添加class的函数addClass()
+		function addClass(obj,newClass){
+			var oldClass = obj.className;
+			//当元素的class为空的时候
+			if(oldClass == ""){
+				obj.className = newClass;
+				return false;
+			}
+			//当元素的class有的时候
+			var arr = oldClass.split(" ");//将字符串变为数组，其中字符串是以空格隔开
+			for(var i=0 ;i<arr.length;i++){
+				if(newClass == arr[i]){
+					return false;
+				}
+			}
+			arr.push(newClass);
+			obj.className = arr.join(" ");//join将数组变为字符串，每个元素以空格隔开
+		}
+		//删除class的函数removeClass
+		function removeClass(obj,old){
+			var oldClass = obj.className;
+			var arr = oldClass.split(" ");//split将字符串变为数组，其中字符串是以空格隔开
+			for(var i=0;i<arr.length;i++){
+				if(arr[i] == old){
+					arr.splice(i,1);
+					break;
+				}
+			}	
+			obj.className = arr.join(" ");//join将数组变为字符串，每个元素以空格隔开
+		}
+	</script>
+</head>
+<body>
+	<div class="announcement">
+		<ul class="ul-1">
+			<li class="li-1 active-1"><a href="#">公告</a>
+				<ul class="ul-2 show">
+					<li><a class="active-2" href="#">9.9天猫全球酒水节启动</a></li>
+					<li><a class="active-2" href="#">10万款酒水等你来干杯</a></li>
+					<li><a class="mt" href="#">天猫超市"订单价对折"</a></li>
+					<li><a class="mt" href="#">女排朱婷上闲鱼学技能</a></li>
+				</ul>
+			</li>
+			<li class="li-1"><a href="#">规则</a>
+				<ul class="ul-2">
+					<li><a class="active-2" href="#">手机号卡商品禁售变更</a></li>
+					<li><a href="#">医疗服务类商品禁售</a></li>
+					<li><a class="mt" href="#">全球购买手市场管理规</a></li>
+					<li><a class="mt" href="#">分期返还类商品禁售</a></li>
+				</ul>
+			</li>
+			<li class="li-1"><a href="#">论坛</a>
+				<ul class="ul-2">
+					<li><a class="active-2" href="#">G20杭州快递影响</a></li>
+					<li><a href="#">杭州"低慢小"禁飞</a></li>
+					<li><a class="mt" href="#">十八纸颠覆家具</a></li>
+					<li><a class="mt" href="#">是赚钱还是骗子</a></li>
+				</ul>
+			</li>
+			<li class="li-1"><a href="#">安全</a>
+				<ul class="ul-2">
+					<li><a class="active-2" href="#">小心被骗子买家盯上</a></li>
+					<li><a class="active-2" href="#">为什么搜不到你宝贝</a></li>
+					<li><a class="mt" href="#">代理生态净化启动</a></li>
+					<li><a class="mt" href="#">新手卖家自杀式玩法</a></li>
+				</ul>
+			</li>
+			<li class="li-1 no-mr"><a href="#">公益</a>
+				<ul class="ul-2">
+					<li><a class="active-2" href="#">阿里捐赠700万元救灾</a></li>
+					<li><a href="#">阿里与残联出助残政策</a></li>
+					<li><a class="mt" href="#">公益宝贝卖家发票索取</a></li>
+					<li><a class="mt" href="#">公益机构淘宝开店攻略</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

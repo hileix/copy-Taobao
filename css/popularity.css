@@ -1,0 +1,32 @@
+.popularity *{ float: left; }
+.popularity{ background: #fff; display: inline-block; margin-top: 10px; }
+.popularity li{  } 
+.popularity a{ width: 179px; height: 76px; }
+.popularity .img-bg{ width: 62px; height: 62px; margin: 8px 0 0 10px; border: 1px solid #EDEDED; border-radius: 50%; padding-left: 0; }
+.popularity h2,.popularity p,.popularity span{ display: inline-block; padding-left: 8px; }
+.popularity h2{ font-size: 16px; font-weight: bold; height: 20px; padding-top: 8px; line-height: 20px; }
+.popularity p{ font-size: 12px; color: #9A745F; padding-top: 5px; }
+.popularity .people{ font-size: 12px; color: #999999; padding-top: 8px; padding-left: 26px; background: url(../img/popularity/hot.png) no-repeat 8px 7px; }
+		
+.popularity .li-1 h2,.popularity .li-1 p{ color: #A58471; }
+.popularity .li-2 h2,.popularity .li-2 p{ color: #81C18F; }
+.popularity .li-3 h2,.popularity .li-3 p{ color: #72A5F6; }
+.popularity .li-4 h2,.popularity .li-4 p{ color: #846FC7; }
+.popularity .li-5 h2,.popularity .li-5 p{ color: #DE525E; }
+		
+.popularity .li-1:hover .img-bg{ border-color: #A58471; opacity: 0.6; }
+.popularity .li-2:hover .img-bg{ border-color: #81C18F; opacity: 0.6; }
+.popularity .li-3:hover .img-bg{ border-color: #72A5F6; opacity: 0.6; }
+.popularity .li-4:hover .img-bg{ border-color: #846FC7; opacity: 0.6; }
+.popularity .li-5:hover .img-bg{ border-color: #DE525E; opacity: 0.6; }
+
+.popularity .img-bg{ 
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+
+.popularity .li-5 a{ width: 173px; }

@@ -1,0 +1,26 @@
+#goodShop{ display: inline-block; margin-top: 10px; }
+#goodShop h2{ width: 290px; height: 36px; background: url(../img/goodShop/bg.png) no-repeat 8px 15px #fff;  }
+#goodShop li{ width: 290px; height: 248px; margin-top: 2px; background: #fff; }
+#goodShop li a{ position: relative; }
+#goodShop li *{ float: left; }
+#goodShop li:hover h3{ color: #FF4400; }
+#goodShop h3{ width: 280px; height: 14px; font-size: 14px; font-weight: bold; color: #3C3C3C; margin: 18px 0 7px 10px; 
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#goodShop li p{ width: 280px; margin: 0 0 10px 10px; font-size: 12px; color: #333333; }
+#goodShop .imgLeft{ position: absolute; left: 10px; top: 154px; margin-right: 1px; }
+#goodShop .img1{ margin: 0 1px 0 10px; }
+#goodShop .seeMore{ display: inline-block; width: 290px; height: 39px; background: #fff; }
+#goodShop .seeMore:hover span,#goodShop .seeMore:hover p{ color: #FF4400; }
+#goodShop .icon-yanjing{ float: left; font-size: 18px; margin: 12px 6px 0 90px; color: #888888; 
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#goodShop .seeMore p{ font-size: 14px; margin-top: 13px; 	color: #666666; 
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}

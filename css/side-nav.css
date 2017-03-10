@@ -1,0 +1,100 @@
+#market{ width: 192px; height: 523px; font-size:12px;background:#FF6537; font-weight:bold; position: absolute; left: 0; top: -34px; }
+#market .title{ height:33px; color:#fff; font-size:14px; padding: 10px 10px 0 10px; }
+#market .title span{ float:right; } 
+#market .title a{ color:#fff; }
+#market ._li{ height:30px; color:#fff; line-height:30px; text-align:center; }
+#market ._li:hover{ background:#F94A14; }
+#market ._li:hover .right{ /*display:block;*/ }
+#market ._li .p1{ position:relative; }
+#market ._li .p1 .a1{ margin-left:17px; }
+#market ._li .p1 .a2{ margin-left:23px; }
+/*设置字体图标的颜色*/
+#market ._li .p1 .zhan1{ position:absolute; left:11px; color:#FF905B; }
+#market ._li .p1 .zhan2{ position:absolute; right:26px; color:yellow; }
+#market ._li:hover .zhan1{ color:#fff; }
+#market ._li .p1 .arrow{ position:absolute; right:13px; }
+#market ._li .p1 a{ color:#fff; margin:0 5px 0 5px; }
+#market ._li .p1 a:hover{ text-decoration:underline; }
+
+#market .right{ width:710px; height:518px;position:absolute; left:190px; top:33px; border:2px solid #F94A14; display:none; opacity:0; filter:alpha(opacity=0) }
+#market .right .__li{ display:inline-block; float:left; width:445px;  }
+#market .right a{ color:#000; font-weight:normal; }
+#market .right .p2{ width:427px; height:53px; border-bottom:1px solid #E0E0E0; margin:0 10px 0 18px; position:relative; }
+
+#market .right .p2 .h3{ display:inline-block; font-size:14px; font-weight:bold; line-height:22px; padding:10px 0 0 32px; margin-right:335px;margin-top:21px;/*position:absolute; left:0; bottom:0;*/ }
+/*1*/
+#market .right .p2 .woman_dress{ background:url(../img/market/market_bg1.png) no-repeat 6px 4px; }
+#market .right .p2 .man_dress{ background:url(../img/market/market_bg2.png) no-repeat 0 4px; }
+#market .right .p2 .underwear{ background:url(../img/market/market_bg3.png) no-repeat 7px 5px; }
+/*2*/
+#market .right .p2 .shoe{ background:url(../img/market/market_bg4.png) no-repeat 6px 4px; }
+#market .right .p2 .bag{ background:url(../img/market/market_bg5.png) no-repeat 0 9px; }
+#market .right .p2 .part{ background:url(../img/market/market_bg6.png) no-repeat 5px 5px; }
+/*3*/
+#market .right .p2 .toy{ background:url(../img/market/market_bg7.png) no-repeat 6px 4px; }
+#market .right .p2 .pab{ background:url(../img/market/market_bg8.png) no-repeat 9px 6px; }
+#market .right .p2 .make{ background:url(../img/market/market_bg9.png) no-repeat 7px 5px; }
+/*4*/
+#market .right .p2 .appliance{ background:url(../img/market/market_bg10.png) no-repeat 2px 14px; }
+#market .right .p2 .digital{ background:url(../img/market/market_bg11.png) no-repeat 0 4px; }
+#market .right .p2 .phone{ background:url(../img/market/market_bg12.png) no-repeat 2px 5px; }
+/*5*/
+#market .right .p2 .beauty{ background:url(../img/market/market_bg13.png) no-repeat 6px 4px; }
+#market .right .p2 .cleaning{ background:url(../img/market/market_bg14.png) no-repeat 3px 4px; }
+#market .right .p2 .hcp{ background:url(../img/market/market_bg15.png) no-repeat 4px 5px; }
+/*6*/
+#market .right .p2 .jewelry{ background:url(../img/market/market_bg16.png) no-repeat 6px 4px; }
+#market .right .p2 .glasses{ background:url(../img/market/market_bg17.png) no-repeat 0 14px; }
+#market .right .p2 .watch{ background:url(../img/market/market_bg18.png) no-repeat 7px 5px; }
+/*7*/
+#market .right .p2 .movement{ background:url(../img/market/market_bg19.png) no-repeat 4px 14px; }
+#market .right .p2 .outdoor{ background:url(../img/market/market_bg20.png) no-repeat 0 4px; }
+#market .right .p2 .instrument{ background:url(../img/market/market_bg21.png) no-repeat 7px 3px; }
+/*8*/
+#market .right .p2 .game{ background:url(../img/market/market_bg22.png) no-repeat 2px 12px; }
+#market .right .p2 .cartoon{ background:url(../img/market/market_bg23.png) no-repeat 0 4px; }
+#market .right .p2 .film{ background:url(../img/market/market_bg24.png) no-repeat 7px 5px; }
+/*9*/
+#market .right .p2 .cate{ background:url(../img/market/market_bg25.png) no-repeat 4px 8px; }
+#market .right .p2 .fresh{ background:url(../img/market/market_bg26.png) no-repeat 0 4px; }
+#market .right .p2 .sock{ background:url(../img/market/market_bg27.png) no-repeat 2px 2px; }
+/*10*/
+#market .right .p2 .flower{ background:url(../img/market/market_bg28.png) no-repeat 2px 4px; }
+#market .right .p2 .pet{ background:url(../img/market/market_bg29.png) no-repeat 8px 4px; }
+#market .right .p2 .amop{ background:url(../img/market/market_bg30.png) no-repeat 2px 12px; }
+/*11*/
+#market .right .p2 .hp{ background:url(../img/market/market_bg31.png) no-repeat 2px 4px; }
+#market .right .p2 .fitment{ background:url(../img/market/market_bg32.png) no-repeat 0 4px; }
+#market .right .p2 .bm{ background:url(../img/market/market_bg33.png) no-repeat 7px 5px; }
+/*12*/
+#market .right .p2 .meuble{ background:url(../img/market/market_bg34.png) no-repeat 6px 4px; }
+#market .right .p2 .hd{ background:url(../img/market/market_bg35.png) no-repeat 0 4px; }
+#market .right .p2 .ht{ background:url(../img/market/market_bg36.png) no-repeat 7px 5px; }
+/*13*/
+#market .right .p2 .car{ background:url(../img/market/market_bg37.png) no-repeat 2px 14px; }
+#market .right .p2 .twocar{ background:url(../img/market/market_bg38.png) no-repeat 0 4px; }
+#market .right .p2 .thing{ background:url(../img/market/market_bg39.png) no-repeat 7px 5px; }
+/*14*/
+#market .right .p2 .office{ background:url(../img/market/market_bg40.png) no-repeat 2px 8px; }
+#market .right .p2 .diy{ background:url(../img/market/market_bg41.png) no-repeat 0 4px; }
+#market .right .p2 .handware{ background:url(../img/market/market_bg42.png) no-repeat 7px 5px; }
+/*15*/
+#market .right .p2 .sears{ background:url(../img/market/market_bg43.png) no-repeat 6px 4px; }
+#market .right .p2 .kit{ background:url(../img/market/market_bg44.png) no-repeat 0 4px; }
+#market .right .p2 .family{ background:url(../img/market/market_bg45.png) no-repeat 3px 8px; }
+/*16*/
+#market .right .p2 .study{ background:url(../img/market/market_bg46.png) no-repeat 2px 8px; }
+#market .right .p2 .ih{ background:url(../img/market/market_bg47.png) no-repeat 0 4px; }
+#market .right .p2 .lc{ background:url(../img/market/market_bg48.png) no-repeat 7px 5px; }
+
+#market .right .p2 .h3:hover{ color:#FF4400; }
+#market .right .p2 .more{ font-size:12px; font-weight:normal; position:absolute; right:1px; bottom:0; line-height:24px;}
+#market .right .p2 .more:hover{ color:#FF4400; }
+#market .right ul{ width:437px; height:107px; margin:0 0 0 18px; padding-top:9px; }
+#market .right ul li{ float:left; padding-right:17px; line-height:24px; }
+#market .right ul a{ color:#666; }
+#market .right .hot{ color:#FF4400; }
+
+#market .right .like{ display:inline-block; width:255px; height:518px; margin-left:9px; background:url(../img/like_bg.png);}
+#market .right{ background: #fff; }
+#market ._li:hover .right{ z-index: 1; }

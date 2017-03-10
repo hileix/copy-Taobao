@@ -1,0 +1,69 @@
+#hotSale{ float: left; width: 1190px; height: 480px; margin: 20px 0 0 80px; }
+#hotSale .title{ width: 1190px; height: 80px; margin-bottom: 1px; background: #fff; }
+#hotSale ul *{ float: left; }
+#hotSale h2{ float: left; width: 720px; height: 20px; margin: 15px 0 20px 467px; background: url(../img/hotSale/bg.png) no-repeat; text-indent: 102px; font-size: 17px; font-weight: bold; color: #3C3C3C; }
+#hotSale li{ margin-right: 3px; }
+#hotSale ul{ width: 1170px; height: 24px; padding-left: 20px; }
+#hotSale ul a{ font-size: 12px; color: #6C6C6C; }
+#hotSale ul a:hover{ color: #FF4400; }
+#hotSale .icon-shuxian{ color: #E8E8E8; }
+#hotSale .part{ float: left; margin-top: 1px; }
+#hotSale .part *{ float: left; }
+#hotSale .left{ width: 233px; height: 397px; margin-right: 1px; }
+#hotSale .right{ width: 161px; height: 397px; }
+#hotSale .goods1{ width: 233px; height: 397px; background: #fff;  }
+#hotSale .goods1 img{ margin: 10px 0 16px 9px; }
+#hotSale .goods1 .price{ width: 224px; font-size: 12px; font-weight: bold; margin: 0 0 9px 9px; color: #FF4400; }
+#hotSale .goods1 .baoyou{ width: 25px; height: 14px; font-size: 12px; background: #8CBF4C; line-height: 14px; text-align: center; color: #FEFEFE; margin: 0 5px 16px 10px; }
+#hotSale .goods1 .xinpin{ width: 26px; height: 14px; font-size: 12px; line-height: 14px; color: #FFFFFF; background: #FC461E; margin: 0 6px 16px 0; text-align: center; }
+#hotSale .goods1 .count{ width: 50px; height: 14px; font-size: 12px; line-height: 14px; margin: 0 110px 16px 0; color: #9C9C9C; }
+#hotSale .goods1 p{ width: 223px; margin: 0 0 74px 10px; color: #6C6C6C; font-size: 12px; } 
+#hotSale .goods1 .assess{ width: 36px; font-size: 12px; margin: 0 10px 0 10px; color: #9C9C9C; }
+#hotSale .goods1 .collect{ font-size: 12px; color: #9C9C9C;  }
+#hotSale .goods2,#hotSale .goods3{ width: 161px; height: 198px; background: #fff; }
+#hotSale .goods2{ margin-bottom: 1px; }
+#hotSale .goods2 img,#hotSale .goods3 img{ margin: 10px 0 12px 11px; }
+#hotSale .goods2 .price,#hotSale .goods3 .price{ width: 150px; font-size: 8px; font-weight: bold; margin: 0 0 8px 11px; color: #FC461E; }
+#hotSale .goods2 .baoyou{ width: 26px; height: 14px; font-size: 12px; background: #8CBF4C; line-height: 14px; text-align: center; margin: 0 5px 0 11px; color: #FEFEFE; }
+#hotSale .goods2 .count,#hotSale .goods3 .count{ font-size: 12px; color: #9C9C9C; }
+#hotSale .goods3 .count{ margin-left: 11px; }
+#hotSale .part1{ margin-right: 2px; }
+#hotSale .part2{ margin-right: 2px; }
+#hotSale .part1 .goods1 .count{ margin-left: 10px; }
+#hotSale .part1 .goods1 p{ margin-bottom: 47px; }
+#hotSale .part1 .goods2 .count{ margin-left: 11px; }
+
+/*遮罩*/
+#hotSale .left,#hotSale .right{ position: relative; }
+
+#hotSale .left .shade{ width: 235px; height: 399px; }
+#hotSale .right .shade2{ width: 163px; height: 200px; }
+#hotSale .right .shade3{ width: 163px; height: 200px; }
+
+#hotSale .shade *{ float: left; }
+#hotSale .shade2 *{ float: left; }
+#hotSale .shade3 *{ float: left; }
+
+#hotSale .left .shade{ position: absolute; left: -1px; top: -1px; display: none; }
+#hotSale .right .shade2{ position: absolute; left: -1px; top: -1px; display: none; }
+#hotSale .right .shade3{ position: absolute; left: -1px; top: 199px; display: none; }
+
+
+#hotSale .left .shade .top{ width: 235px; height: 225px; background: #FF4400; opacity: 0.8; }
+#hotSale .right .shade2 .top{ width: 163px; height: 149px; background: #FF4400; opacity: 0.8; }
+#hotSale .right .shade3 .top{ width: 163px; height: 149px; background: #FF4400; opacity: 0.8; }
+
+#hotSale .left .shade .bottom{ position: absolute; left: 0px; top: 225px; width: 233px; height: 172px; border: 1px solid #FF4400; }
+#hotSale .right .shade2 .bottom{ position: absolute; left: 0px; top: 149px; width: 162px; height: 48px; border: 1px solid #FF4400; }
+#hotSale .right .shade3 .bottom{ position: absolute; left: 0px; top: 149px; width: 161px; height: 48px; border: 1px solid #FF4400; }
+
+
+#hotSale .left .shade-p{ position: absolute; left: 11px; top: 144px; width: 210px; font-size: 12px; color: #fff; display: none; }
+#hotSale .right .shade-p2{ position: absolute; left: 11px; top: 86px; width: 150px; font-size: 12px; color: #fff; display: none; }
+#hotSale .right .shade-p3{ position: absolute; left: 11px; top: 284px; width: 150px; font-size: 12px; color: #fff; display: none; }
+
+#hotSale .left .shade-a{ position: absolute; left: 11px; top: 171px; width: 86px; height: 30px; font-size: 12px; background: #fff; color: #FF4400; border-radius: 4px; line-height: 30px; text-align: center; display: none; }
+#hotSale .right .shade-a2{ position: absolute; left: 11px; top: 106px; width: 86px; height: 30px; font-size: 12px; background: #fff; color: #FF4400; border-radius: 4px; line-height: 30px; text-align: center; display: none; }
+#hotSale .right .shade-a3{ position: absolute; left: 11px; top: 304px; width: 86px; height: 30px; font-size: 12px; background: #fff; color: #FF4400; border-radius: 4px; line-height: 30px; text-align: center; display: none; }
+
+#hotSale .left:hover .shade,#hotSale .left:hover .shade-p,#hotSale .left:hover .shade-a{ display: block; }

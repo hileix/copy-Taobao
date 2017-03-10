@@ -1,0 +1,48 @@
+/*搜索栏样式！！！！！！！！！！！！！*/
+.fixed-search{ width: 100%; height:49px; font-size:12px; position: fixed; left: 0; top: -50px; background-color: #fff; box-shadow: 0 1px 4px #000; z-index: 2; }
+.fixed-search form{ display: inline-block; }
+
+.fixed-search .form{ float:left; width:626px; height:35px; position:relative; overflow: hidden; }
+.fixed-search .form .text{ float:left; outline:none; width:397px; height:29px; border:3px solid #FF5500; border-right:none; text-indent:12px; border-left: none; background:url(../img/search/1.png) no-repeat 13px 8px;  }
+.fixed-search .form .text-2,.fixed-search .form .text-3{ float:left; outline:none; width:500px; height:29px; border:3px solid #C60000; border-right:none; text-indent:12px; border-left: none; background: none; }
+.fixed-search .form .text-3{ border-color:#FF5500; }
+
+
+.fixed-search .form .wrap-1{ position:absolute; left:472px;  width:31px; height:29px; /*background:#eee;*/ border-top:3px solid #FF5500; border-bottom:3px solid #FF5500; }
+.fixed-search .form .icon-xiangji{ font-weight:bold; text-align:center; line-height:34px; }
+.fixed-search .form .icon-xiangji:hover{ color:#FF5010; }
+.fixed-search .form .file{ /*float:left;*/ position:absolute; left:0; outline:none; width:17px; height:13px; opacity:0; margin:6px 0 0 6px;  }
+/*提交按钮用绝对定位，这样，提交按钮就脱离文档流，file空间不会对其影响（本来file控件会延伸到提交按钮里面去，这样就不会了）*/
+.fixed-search .form .submit{ /*float:left;*/ position:absolute; left:475px; outline:none; width:122px; height:35px; background:#FF4200; border:none; font-size:17px; font-weight:bold; color:#fff; margin-left:28px; zoom:1; }
+.fixed-search .form .submit:hover{ background:#F52B00; cursor:pointer; }
+.fixed-search .adv-fixed-search{ float:left; width:24px; height:40px; margin-top:5px; padding-left:8px; }
+.fixed-search .adv-fixed-search:hover{ color:#FF4400; }
+
+.fixed-search ul{ margin-bottom:0; height:12px; }
+.fixed-search li{ float:left; height:12px; margin:9px 9px 0 0; }
+.fixed-search li a{ color:#666666; }
+.fixed-search li a:hover{ color:#FF4400; }
+.fixed-search .more{ margin-left:33px; }
+.fixed-search .hot{ color:#FF4400; }
+.fixed-search .hot-2{ color:#C60000; }
+.fixed-search .hot-2:hover{ color:#C60000; }
+
+/*搜索框的显示和隐藏*/
+.fixed-search .box-2,.fixed-search .box-3{ display: none; }
+.fixed-search .box-1{ display: inline-block; }
+
+.fixed-search .box-2 .submit{ background-color: #C40000; }
+.fixed-search .box-2 .submit:hover{ background-color: #C40000; }
+.fixed-search .box-1,.fixed-search .box-2,.fixed-search .box-3{ margin-top: 4px; }
+
+
+/*********************************************************/
+.fixed-search .wrap{ width: 1190px; height: 49px; margin: 0 auto; }
+.fixed-search .logo{ display: inline-block; margin: 5px 185px 0 0;  }
+.fixed-search .logo img{ /*margin-bottom: 9px;*/ }
+
+.fixed-search .choose{ width: 75px; height: 93px; display: inline-block; float: left; background-color: #F6F6F6; }
+.fixed-search .choose a{ display: inline-block; width: 75px; height: 29px; font-size: 12px; color: #FF5400; line-height: 29px; text-align: center; }
+.fixed-search .choose .active{ color: #3C3C3C; border: 3px solid #FF5500; border-right: none; }
+
+.fixed-search .box-2 .choose .active{ border: 3px solid #C60000; border-right: none; }

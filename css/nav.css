@@ -1,0 +1,6 @@
+.nav{ height: 28px; position: absolute; left: 199px; top: 134px;  }
+.nav li{ float: left; margin-left: 4px; }
+.nav .iconfont{ line-height: 28px; }
+.nav li a{ float: left; color: #3C3C3C; font-size: 14px; height: 28px; line-height: 28px; padding: 0 8px 0 8px; font-weight: bold;   }
+.nav .hot a{ color: #FF4400; font-size: 18px; }
+.nav li:hover a{ border-radius: 14px; background-color: #FF4400; color: #fff; }

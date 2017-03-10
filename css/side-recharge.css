@@ -1,0 +1,219 @@
+.clear { zoom:1; }/*这两句是用来清浮动的*/
+.clear:after { content:''; display:block; clear:both; }
+
+/*淘宝右边side-recharge样式*/
+.recharge { width:288px; height:206px; position:relative; background: #fff; }
+.recharge a{ font-size:12px; color:#666666; }
+.recharge .li-1,.recharge .li-1-u{ float:left; width:70px; height:67px; border:1px solid #EAEAEA; border-left:1px solid #fff; }
+.recharge .fun1Color{ color:#FF4300; }
+.recharge .li-1-u{ border-top:1px solid #fff; }
+/*.recharge .li-1:hover{  }*/
+.recharge .borderThree{ border:1px solid #FF4400; border-bottom:1px solid #fff; }
+.recharge .li-1:hover .ul-2{ display:block; }
+	/*图标样式*/
+.recharge .iconfont{ display:block; font-size:24px; text-align:center; padding-top:12px; font-weight:bold; }
+.recharge .text{ display:inline-block; width:70px; height:23px; text-align:center; }
+			/*图标颜色*/
+.recharge .icon-shouji,.recharge .icon-yuanbao{ color:#967CFF; }
+.recharge .icon-youxi{ color:#09CFC5; }
+.recharge .icon-zhifeiji,.recharge .icon-yinle{ color:#00B3FF; }
+.recharge .icon-baoxian,.recharge .icon-waimai,.recharge .icon-huochepiao{ color:#A8C000; }
+.recharge .icon-caipiao,.recharge .icon-shuidianmeijiaofei{ color:#CA8D80; }
+.recharge .icon-daining,.recharge .icon-xiaolian{ color:#FF44C7; }
+	/*ul-2下样式*/
+.recharge .ul-2-1,.recharge .ul-2-2,.recharge .ul-2-3,.recharge .ul-2-4{ display:none; position:absolute; left:0; top:69px; width:286px; height:150px; border:1px solid #FF4400; border-top:none; background:#fff;}
+.recharge .ul-2-4{ display:block; }/*这两句代码很重要，关系到充话费、游戏、旅行、保险下面菜单的显示与隐藏*/
+
+.recharge .ul-2-1 .li-2{ float:left; width:55px; height:34px; line-height:34px; margin-left:5px; }
+.recharge .ul-2-1 .li-2-first{ margin-left:20px; }
+.recharge .ul-2-1 .li-2 a{ float:left; margin-left:10px;}
+.recharge .ul-2-1 .li-2:hover a{ color:#FF4300; }
+.recharge .close{ position:absolute; right:5px; top:5px; width:16px; height:16px; line-height:16px; text-align:center; }
+.recharge .close a{ display:block; width:16px; height:16px; }
+.recharge .close:hover{ background:#EEEEEE; font-weight:bold; }
+
+	/*form下的样式*/
+.recharge .ul-2-1 .li-2-1 form{ width:286px; height:117px;position:absolute; left:0px; top:33px; }
+.recharge .ul-2-1 .li-2-1 form .input-wrap{ width:190px; height:51px; margin-left:15px; }
+		/*.li-2-1充话费*/
+.recharge .ul-2-1 .li-2-1 form .input-number{ float:left; width:162px; height:24px; color:#A9A9A9; border:1px solid #CCCCCC; border-right:none; outline:none; background:url(../img/recharge/1.png) no-repeat; text-indent:5px; }
+.recharge .ul-2-1 .li-2-1 form .input-number-next{ float:left; width:24px; height:24px; border:1px solid #CCCCCC; border-left:none; font-size:15px; padding-top:0; line-height:24px; color:#B7B7B7; }
+.recharge .ul-2-1 .li-2-1 form .input-number-next:hover{ color:#737373; }
+
+.recharge .ul-2-1 .li-2-1 form .choose-count{ float:left; width:163px; height:24px; background:#fff url(../img/recharge/2.png) no-repeat; border:1px solid #CCCCCC; border-right:none; border-top:none; outline:none; /*position:relative; top:-3px;*/ }
+.recharge .ul-2-1 .li-2-1 form .choose-count-next{ float:left; width:24px; height:28px; border:1px solid #CCCCCC; border-left:none; border-top:none; font-size:15px; padding-top:0; line-height:28px; color:#B7B7B7; position:relative; top:-5px; font-weight:normal; }
+.recharge .ul-2-1 .li-2-1 form .choose-count-next:hover{ color:#737373; }
+
+.recharge .ul-2-1 .li-2-1 form p{ width:164px; height:30px; font-size:12px; color:#666666; margin-top:0px; line-height:30px; padding-left:4px; margin-left:15px; }
+.recharge .ul-2-1 .li-2-1 form p span{ color:#FF4400; font-weight:bold; }
+.recharge .ul-2-1 .li-2-1 form .instant{ float:left; width:72px; height:26px; background:#FF4400; border:none; font-weight:bold; color:#fff; cursor:pointer; outline:none; margin-left:15px; }
+.recharge .ul-2-1 .li-2-1 form .instant:hover { background:#F22D00; }
+
+		/*.li-2-2充流量*/
+.recharge .ul-2-1 .li-2-2 form{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-1 .li-2-2 form .input-wrap{ width:215px; height:51px; margin-left:15px; }
+.recharge .ul-2-1 .li-2-2 form .input-number{ float:left; width:163px; height:24px; border:1px solid #CCCCCC; border-right:none; outline:none; background:url(../img/recharge/1.png) no-repeat; }
+.recharge .ul-2-1 .li-2-2 form .input-number-next{ float:left; font-size:15px; color:#B7B7B7; border:1px solid #CCCCCC; border-left:none; width:25px; height:24px; padding-top:0; line-height:24px; text-align:center; }
+
+.recharge .ul-2-1 .li-2-2 form .input-number-next:hover{ color:#737373; }
+.recharge .ul-2-1 .li-2-2 form .type{ float:left; width:71px; height:24px; border:1px solid #CCCCCC; border-top:none; border-right:none; background:#fff; outline:none; }
+.recharge .ul-2-1 .li-2-2 form .type-next,.recharge .ul-2-1 .li-2-2 form .old-number-next{ float:left; width:23px; height:23px; border:1px solid #CCCCCC; border-left:none; border-top:none; font-size:15px; padding-top:0; line-height:24px; color:#B7B7B7; }
+.recharge .ul-2-1 .li-2-2 form .type-next:hover{ color:#737373; }
+.recharge .ul-2-1 .li-2-2 form .old-number{ float:left; width:71px; height:24px; border:none; border-bottom:1px solid #CCCCCC; background:#fff; outline:none; }
+.recharge .ul-2-1 .li-2-2 form p{ font-size:12px; height:30px; line-height:30px; color:#666666; padding-left:4px; margin-left:15px; }
+.recharge .ul-2-1 .li-2-2 form p span{ color:#FF4400; font-weight:bold; }
+.recharge .ul-2-1 .li-2-2 form .instant{ width:68px; height:28px; border:none; background:#FF4400; color:#fff; font-weight:bold; margin-left:15px; }
+.recharge .ul-2-1 .li-2-2 form .instant:hover{ background:#F22D00; }
+		/*.li-2-3充固话*/
+.recharge .ul-2-1 .li-2-3 form{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-1 .li-2-3 form .input-wrap{ width:200px; height:74px; margin-left:15px; }
+.recharge .ul-2-1 .li-2-3 form .choose-1,.recharge .ul-2-1 .li-2-3 form .choose-2{ float:left; margin-top:4px; width:12px; height:12px; }
+.recharge .ul-2-1 .li-2-3 form .choose-2{ margin-left:28px; }
+.recharge .ul-2-1 .li-2-3 form .choose-1-next,.recharge .ul-2-1 .li-2-3 form .choose-2-next{ float:left; font-size:12px; padding-left:3px; height:20px; line-height:20px; }
+.recharge .ul-2-1 .li-2-3 form .input-fixed{ background:url(../img/recharge/3.png) no-repeat; }
+.recharge .ul-2-1 .li-2-3 form .input-fixed,.recharge .ul-2-1 .li-2-3 form .choose-count{ float:left; width:173px; height:25px; border:1px solid #CCCCCC; border-right:none; outline:none; }
+.recharge .ul-2-1 .li-2-3 form .input-fixed-next,.recharge .ul-2-1 .li-2-3 form .choose-count-next{ float:left; width:25px; height:25px; line-height:25px; border:1px solid #CCCCCC; border-left:none; font-size:15px; padding-top:0; color:#B7B7B7; }
+.recharge .ul-2-1 .li-2-3 form .choose-count{ border-top:none; background:#fff; }
+.recharge .ul-2-1 .li-2-3 form .choose-count-next{ border-top:none; width:26px; height:24px; }
+
+.recharge .ul-2-1 .li-2-3 form .instant{ width:68px; height:28px; border:none; background:#FF4200; color:#fff; font-weight:bold; margin-left:15px; }
+.recharge .ul-2-1 .li-2-3 form p{ display:inline-block; width:90px; height:30px; font-size:12px; margin-left:34px; text-align:right; color:#747474; }
+.recharge .ul-2-1 .li-2-3 form p span{ color:#FF4200; font-weight:bold; }
+
+		/*.li-2-4充宽带*/
+.recharge .ul-2-1 .li-2-4 form{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-1 .li-2-4 form .input-wrap{ width:218px; height:80px; margin-left:15px; }
+.recharge .ul-2-1 .li-2-4 form  .telecom,.recharge .ul-2-1 .li-2-4 form .input-number,.recharge .ul-2-1 .li-2-4 form .choose-count{ float:left; width:173px; height:25px; border:1px solid #CCCCCC; border-right:none; background:#fff; outline:none; }
+.recharge .ul-2-1 .li-2-4 form  .telecom-next,.recharge .ul-2-1 .li-2-4 form .input-number-next,.recharge .ul-2-1 .li-2-4 form .choose-count-next{ float:left; width:25px; height:23px; border:1px solid #CCCCCC; border-left:none; padding-top:0; font-size:15px; line-height:23px; color:#B7B7B7; }
+.recharge .ul-2-1 .li-2-4 form .input-number,.recharge .ul-2-1 .li-2-4 form .choose-count{ border-top:none; }
+.recharge .ul-2-1 .li-2-4 form .input-number-next{ border-top:none; width:24px; height:25px; }
+.recharge .ul-2-1 .li-2-4 form .choose-count-next{ border-top:none; width:25px; height:24px; }
+.recharge .ul-2-1 .li-2-4 form .instant { width:68px; height:26px; border:none; background:#FF4200; color:#fff; font-weight:bold; outline:none; margin-left:15px; }
+.recharge .ul-2-1 .li-2-4 form .instant:hover{ background:#F52B00; }
+.recharge .ul-2-1 .li-2-4 form p{ display:inline-block; width:80px; height:32px; font-size:12px; color:#747474; padding-left:43px; }
+.recharge .ul-2-1 .li-2-4 form p span{ color:#FF4200; font-weight:bold; }
+
+	/*.ul-2-2下的样式*/		
+		/*公共样式*/
+.recharge .ul-2-2 .li-2{ float:left; height:34px; line-height:34px; margin-left:22px; }
+.recharge .ul-2-2 .li-2:hover a{ color:#FF4400; }
+.recharge .ul-2-2 .li-2-1 form,.recharge .ul-2-2 .li-2-2 form,.recharge .ul-2-2 .li-2-3 .games{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-2 .li-2-1 form .input-wrap *,.recharge .ul-2-2 .li-2-2 form .input-wrap *,.recharge .ul-2-2 .li-2-3 .games *{ float:left; }
+		/*.li-2-1*/
+.recharge .ul-2-2 .li-2-1 form .input-wrap{	width:217px; height:106px; margin-left:15px; }
+
+.recharge .ul-2-2 .li-2-1 form h6{ width:31px; height:24px; background:#E5E5E5; font-size:12px; color:#666666; line-height:24px; text-align:center; border:1px solid #CCCCCC; border-right:none; }
+.recharge .ul-2-2 .li-2-1 form .no-border-top{ border-top:none; }
+.recharge .ul-2-2 .li-2-1 form .input-name{ background:url(../img/recharge/5.png) no-repeat; text-indent:10px; }
+.recharge .ul-2-2 .li-2-1 form .input-name,.recharge .ul-2-2 .li-2-1 form .choose-count{ width:151px; height:24px; border:1px solid #CCCCCC; border-right:none; border-left:none; outline:none; }
+.recharge .ul-2-2 .li-2-1 form .input-name-next,.recharge .ul-2-2 .li-2-1 form .choose-count-next{ width:33px; height:24px; border:1px solid #CCCCCC; border-left:none; padding-top:0; font-weight:normal; line-height:24px; color:#CCCCCC; font-size:15px; }
+.recharge .ul-2-2 .li-2-1 form .choose-count{ border-top:none; height:25px; background:#fff; }
+.recharge .ul-2-2 .li-2-1 form .choose-count-next{ border-top:none; }
+.recharge .ul-2-2 .li-2-1 form .input-name-next:hover,.recharge .ul-2-2 .li-2-1 form .choose-count-next:hover{ color:#9C9C9C; }
+.recharge .ul-2-2 .li-2-1 form .choose-1{ margin-left:95px; }
+.recharge .ul-2-2 .li-2-1 form .choose-1,.recharge .ul-2-2 .li-2-1 form .choose-2{ width:13px; height:23px; }
+.recharge .ul-2-2 .li-2-1 form .choose-1-next,.recharge .ul-2-2 .li-2-1 form .choose-2-next{ font-size:12px; height:22px; line-height:22px; color:#3C3C3C; }
+.recharge .ul-2-2 .li-2-1 form .instant{ width:68px; height:26px; font-size:12px; font-weight:bold; background:#FF4400; border:none; outline:none; color:#fff; }
+.recharge .ul-2-2 .li-2-1 form .instant:hover{ background:#F22D00; }
+.recharge .ul-2-2 .li-2-1 form p{ width:132px; height:28px;  font-size:12px; line-height:28px; margin-left:10px; }
+.recharge .ul-2-2 .li-2-1 form p a{ color:#666666; }
+.recharge .ul-2-2 .li-2-1 form p:hover{ color:#FF6600; }
+		/*.li-2-2*/
+.recharge .ul-2-2 .li-2-2 form .input-wrap{ width:258px; height:106px; margin-left:15px; }
+.recharge .ul-2-2 .li-2-2 form .input-QQ{ width:256px; height:24px; border:1px solid #CCCCCC; background:url(../img/recharge/6.png) no-repeat; outline:none; text-indent:6px; }
+.recharge .ul-2-2 .li-2-2 form .type,.recharge .ul-2-2 .li-2-2 form .count{ width:99px; height:24px; border:1px solid #CCCCCC; border-top:none; border-right:none; background:#fff; outline:none; }
+.recharge .ul-2-2 .li-2-2 form .type-next,.recharge .ul-2-2 .li-2-2 form .count-next{ width:29px; height:23px; line-height:24px; padding-top:0; font-size:15px; border-bottom:1px solid #CCCCCC; color:#CCCCCC; }
+.recharge .ul-2-2 .li-2-2 form .count-next{ border-right:1px solid #CCCCCC; width:30px; }
+.recharge .ul-2-2 .li-2-2 form .type-next:hover,.recharge .ul-2-2 .li-2-2 form .count-next:hover{ color:#9C9C9C; }
+.recharge .ul-2-2 .li-2-2 form p{ width:258px; height:28px; font-size:10px; line-height:28px;  }
+.recharge .ul-2-2 .li-2-2 form p i{ color:#999999; font-style:normal; }
+.recharge .ul-2-2 .li-2-2 form p span{ color:#FF6600; font-weight:bold; }
+.recharge .ul-2-2 .li-2-2 form .instant{ width:68px; height:28px; background:#FF4400; font-size:12px; font-weight:bold; border:none; outline:none; color:#fff; }
+.recharge .ul-2-2 .li-2-2 form .instant:hover{ background:#F22D00; }
+.recharge .ul-2-2 .li-2-2 form .more{ width:160px; height:28px; line-height:28px; margin-left:10px; }
+.recharge .ul-2-2 .li-2-2 form .more a{ color:#666666; }
+.recharge .ul-2-2 .li-2-2 form .more a:hover{ color:#FF6600; }
+		/*.li-2-3 games*/
+
+.recharge .ul-2-2 .li-2-3 a{ float:left; color:#333333; }
+.recharge .ul-2-2 .li-2-3 a{ color:#333333!important; }
+.recharge .ul-2-2 .li-2-3 .a-1{ width:80px; height:44px; }
+.recharge .ul-2-2 .li-2-3 .a-2{ width:89px; height:18px; text-indent:16px; line-height:18px; }
+.recharge .ul-2-2 .li-2-3 .datianshizhijian,.recharge .ul-2-2 .li-2-3 .gongchengluedi,.recharge .ul-2-2 .li-2-3 .nvshenlianmeng{ width:80px; height:44px; margin-left:9px; margin-bottom:14px; }
+
+.recharge .ul-2-2 .li-2-3 .first{ margin-left:15px; }
+.recharge .ul-2-2 .li-2-3 .datianshizhijian{ background:url(../img/recharge/1-1.png); }
+.recharge .ul-2-2 .li-2-3 .gongchengluedi{ background:url(../img/recharge/1-2.png); }
+.recharge .ul-2-2 .li-2-3 .nvshenlianmeng{ background:url(../img/recharge/1-3.png); }
+.recharge .ul-2-2 .li-2-3 .fengyunwushuang{ background:url(../img/recharge/1-4.png) no-repeat; margin-left:15px; }
+.recharge .ul-2-2 .li-2-3 .lieyan{ background:url(../img/recharge/1-5.png) no-repeat; }
+.recharge .ul-2-2 .li-2-3 .dezhoupuke{ background:url(../img/recharge/1-6.png) no-repeat; }
+.recharge .ul-2-2 .li-2-3 .wuyichuanqi{ background:url(../img/recharge/1-7.png) no-repeat; margin-left:15px; margin-top:8px; }
+.recharge .ul-2-2 .li-2-3 .rexuesanguoer{ background:url(../img/recharge/1-8.png) no-repeat; margin-top:8px; }
+.recharge .ul-2-2 .li-2-3 .qijilaile{ background:url(../img/recharge/1-9.png) no-repeat; margin-top:8px; }
+	/*.ul-2-3下的样式*/
+.recharge .ul-2-3 .li-2 { float:left; height:32px; margin-left:6px; line-height:32px; }
+.recharge .ul-2-3 .li-2:hover a{ color:#FF4300; }
+.recharge .ul-2-3 .first{ margin-left:16px; }
+		/*.li-2-1;.li-2-2;.li-2-3;.li-2-4;li-2-5*/
+.recharge .ul-2-3 .li-2-1 form,.recharge .ul-2-3 .li-2-2 form,.recharge .ul-2-3 .li-2-3 form,.recharge .ul-2-3 .li-2-4 form,.recharge .ul-2-3 .li-2-5 form{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-3 .li-2-1 form .input-wrap,.recharge .ul-2-3 .li-2-2 form .input-wrap,.recharge .ul-2-3 .li-2-3 form .input-wrap,.recharge .ul-2-3 .li-2-4 form .input-wrap,.recharge .ul-2-3 .li-2-5 form .input-wrap{ width:260px; height:102px; margin-left:15px; }
+.recharge .ul-2-3 .li-2-1 form .input-wrap *,.recharge .ul-2-3 .li-2-2 form .input-wrap *,.recharge .ul-2-3 .li-2-3 form .input-wrap *,.recharge .ul-2-3 .li-2-4 form .input-wrap *,.recharge .ul-2-3 .li-2-5 form .input-wrap *{ float:left; }
+.recharge .ul-2-3 .li-2-1 form .type,.recharge .ul-2-3 .li-2-2 form .type,.recharge .ul-2-3 .li-2-3 form .type,.recharge .ul-2-3 .li-2-4 form .type{ width:12px; height:12px; }
+.recharge .ul-2-3 .li-2-1 form .form,.recharge .ul-2-3 .li-2-2 form .form,.recharge .ul-2-3 .li-2-3 form .form,.recharge .ul-2-3 .li-2-4 form .form{ font-size:12px; color:#333333;height:16px; line-height:12px; padding-left:5px; }
+.recharge .ul-2-3 .li-2-1 form .form-1,.recharge .ul-2-3 .li-2-2 form .form-1,.recharge .ul-2-3 .li-2-3 form .form-1,.recharge .ul-2-3 .li-2-4 form .form-1{ padding-right:22px; }
+.recharge .ul-2-3 .li-2-1 form .form-2,.recharge .ul-2-3 .li-2-2 form .form-2,.recharge .ul-2-3 .li-2-3 form .form-2,.recharge .ul-2-3 .li-2-4 form .form-2{ padding-right:38px; }
+.recharge .ul-2-3 .li-2-2 form .form-2,.recharge .ul-2-3 .li-2-3 form .form-2,.recharge .ul-2-3 .li-2-4 form .form-2{ margin-right:90px; }
+.recharge .ul-2-3 .li-2-3 form .form-2{ margin-right:70px; }
+.recharge .ul-2-3 .li-2-1 form .tip{ width:110px; height:16px; color:#BBBBBB; font-size:12px; line-height:16px; }
+.recharge .ul-2-3 .li-2-1 form .start,.recharge .ul-2-3 .li-2-1 form .arrive,.recharge .ul-2-3 .li-2-2 form .start,.recharge .ul-2-3 .li-2-2 form .arrive,.recharge .ul-2-3 .li-2-3 form .check,.recharge .ul-2-3 .li-2-3 form .leave,.recharge .ul-2-3 .li-2-4 form .start,.recharge .ul-2-3 .li-2-4 form .arrive,.recharge .ul-2-3 .li-2-5 form .start,.recharge .ul-2-3 .li-2-5 form .arrive{ width:30px; height:24px; border:1px solid #CCCCCC; border-right:none; background:#F5F5F5; font-size:12px; color:#6B6B6B; line-height:24px; text-align:center; }
+.recharge .ul-2-3 .li-2-1 form .start-,.recharge .ul-2-3 .li-2-2 form .start-,.recharge .ul-2-3 .li-2-3 form .check-,.recharge .ul-2-3 .li-2-3 form .leave-,.recharge .ul-2-3 .li-2-5 form .start-{ border-top:none; }
+.recharge .ul-2-3 .li-2-1 form .choose-city,.recharge .ul-2-3 .li-2-1 form .date,.recharge .ul-2-3 .li-2-2 form .choose-city,.recharge .ul-2-3 .li-2-2 form .date,.recharge .ul-2-3 .li-2-3 form .choose-city,.recharge .ul-2-3 .li-2-3 form .location,.recharge .ul-2-3 .li-2-3 form .date,.recharge .ul-2-3 .li-2-4 form .choose-city,.recharge .ul-2-3 .li-2-5 form .choose-city,.recharge .ul-2-3 .li-2-5 form .date{ width:70px; height:26px; border:1px solid #CCCCCC; border-left:none; border-right:none; background:#fff; }
+.recharge .ul-2-3 .li-2-3 form .location{ margin-left:20px; margin-top:0; width:118px; border:1px solid #CCCCCC; }
+.recharge .ul-2-3 .li-2-1 form .date,.recharge .ul-2-3 .li-2-2 form .date,.recharge .ul-2-3 .li-2-3 form .date,.recharge .ul-2-3 .li-2-5 form .date{ border-top:none; height:25px; }
+.recharge .ul-2-3 .li-2-1 form .choose-city-next,.recharge .ul-2-3 .li-2-1 form .date-next,.recharge .ul-2-3 .li-2-2 form .choose-city-next,.recharge .ul-2-3 .li-2-2 form .date-next,.recharge .ul-2-3 .li-2-3 form .choose-city-next,.recharge .ul-2-3 .li-2-3 form .date-next,.recharge .ul-2-3 .li-2-4 form .choose-city-next,.recharge .ul-2-3 .li-2-5 form .choose-city-next,.recharge .ul-2-3 .li-2-5 form .date-next{ width:18px; height:24px; border:1px solid #CCCCCC; border-left:none; font-size:14px; color:#DCDCDC;padding-top:0; line-height:24px; }
+.recharge .ul-2-3 .li-2-1 form .date-next,.recharge .ul-2-3 .li-2-2 form .date-next,.recharge .ul-2-3 .li-2-3 form .date-next,.recharge .ul-2-3 .li-2-5 form .date-next{ border-top:none; margin-right:140px; }
+.recharge .ul-2-3 .li-2-3 form .date-next,.recharge .ul-2-3 .li-2-4 form .choose-city-next,.recharge .ul-2-3 .li-2-5 form .choose-city-next{ margin-right:20px; }
+.recharge .ul-2-3 .li-2-3 form .date-next-,.recharge .ul-2-3 .li-2-4 form .choose-city-next-no,.recharge .ul-2-3 .li-2-5 form .choose-city-next-no{ margin-right:0; }
+.recharge .ul-2-3 .li-2-1 form .you,.recharge .ul-2-3 .li-2-2 form .you{ width:20px; height:26px; color:#CCCCCC; font-size:12px; line-height:12px; line-height:26px; text-align:center; }
+.recharge .ul-2-3 .li-2-1 form .search,.recharge .ul-2-3 .li-2-2 form .search,.recharge .ul-2-3 .li-2-3 form .search,.recharge .ul-2-3 .li-2-4 form .search,.recharge .ul-2-3 .li-2-5 form .search{ width:44px; height:27px; background:#FF4400; border:none; font-size:12px; font-weight:bold; outline:none; color:#FFF; margin-top:8px; }
+.recharge .ul-2-3 .li-2-1 form .favorable,.recharge .ul-2-3 .li-2-2 form .favorable,.recharge .ul-2-3 .li-2-3 form .favorable,.recharge .ul-2-3 .li-2-4 form .favorable{ width:172px; height:27px; font-size:12px; color:#666666; margin-left:14px; line-height:27px; margin-top:8px; }
+.recharge .ul-2-3 .li-2-4 form .favorable{ width:184px; }
+.recharge .ul-2-3 .li-2-1 form .favorable a,.recharge .ul-2-3 .li-2-2 form .favorable a,.recharge .ul-2-3 .li-2-3 form .favorable a,.recharge .ul-2-3 .li-2-4 form .favorable a{ color:#666666; }
+.recharge .ul-2-3 .li-2-1 form .favorable:hover a,.recharge .ul-2-3 .li-2-2 form .favorable:hover a,.recharge .ul-2-3 .li-2-3 form .favorable a:hover,.recharge .ul-2-3 .li-2-4 form .favorable a:hover{ color:#FF6600; }
+
+	/*.ul-2-4 下样式*/
+		/*公共样式*/
+.recharge .ul-2-4 .li-2 { float:left; height:32px; margin-left:18px; line-height:32px; }
+.recharge .ul-2-4 .li-2:hover a{ color:#FF4400; }
+.recharge .ul-2-4 .li-2 .input-wrap{ margin-left:15px; width:259px; height:96px; }
+.recharge .ul-2-4 .li-2 .input-wrap *{ float:left; }
+		/*.li-2-1;.li-2-2;.li-2-3;.li-2-4*/
+.recharge .ul-2-4 .li-2-1 form,.recharge .ul-2-4 .li-2-2 form,.recharge .ul-2-4 .li-2-3 form,.recharge .ul-2-4 .li-2-4 form,.recharge .ul-2-4 .li-2-5 form{ width:286px; height:117px; position:absolute; left:0px; top:33px; }
+.recharge .ul-2-4 .li-2-1 form .hot-city,.recharge .ul-2-4 .li-2-1 form .insure-company,.recharge .ul-2-4 .li-2-2 form .insure-type,.recharge .ul-2-4 .li-2-2 form .insure-time,.recharge .ul-2-4 .li-2-3 form .insure-type,.recharge .ul-2-4 .li-2-3 form .fea-insure,.recharge .ul-2-4 .li-2-4 form .go-location,.recharge .ul-2-4 .li-2-4 form .go-time,.recharge .ul-2-4 .li-2-5 form .fea-insure{ width:64px; height:24px; border:1px solid #CCCCCC; border-right:none; font-size:12px; line-height:24px; text-align:center; background:#F5F5F5; color:#6B6B6B; }
+.recharge .ul-2-4 .li-2-1 form .insure-company,.recharge .ul-2-4 .li-2-2 form .insure-time,.recharge .ul-2-4 .li-2-3 form .fea-insure,.recharge .ul-2-4 .li-2-4 form .go-time{ border-top:none; }
+.recharge .ul-2-4 .li-2-1 form .choose-city,.recharge .ul-2-4 .li-2-1 form .choose-type,.recharge .ul-2-4 .li-2-2 form .avi-accident,.recharge .ul-2-4 .li-2-2 form .choose-time,.recharge .ul-2-4 .li-2-3 form .illness,.recharge .ul-2-4 .li-2-3 form .illness,.recharge .ul-2-4 .li-2-3 form .insure-xubao,.recharge .ul-2-4 .li-2-4 form .churchyard,.recharge .ul-2-4 .li-2-4 form .choose-time,.recharge .ul-2-4 .li-2-5 form .choose-type{ width:168px; height:24px; border:1px solid #CCCCCC; border-left:none; border-right:none; }
+.recharge .ul-2-4 .li-2-1 form .choose-type,.recharge .ul-2-4 .li-2-2 form .choose-time,.recharge .ul-2-4 .li-2-3 form .insure-xubao,.recharge .ul-2-4 .li-2-4 form .choose-time{ border-top:none; }
+.recharge .ul-2-4 .li-2-1 form .choose-city-next,.recharge .ul-2-4 .li-2-1 form .choose-type-next,.recharge .ul-2-4 .li-2-2 form .avi-accident-next,.recharge .ul-2-4 .li-2-2 form .choose-time-next,.recharge .ul-2-4 .li-2-3 form .illness-next,.recharge .ul-2-4 .li-2-3 form .insure-xubao-next,.recharge .ul-2-4 .li-2-4 form .choose-time-next,.recharge .ul-2-4 .li-2-4 form .churchyard-next,.recharge .ul-2-4 .li-2-5 form .choose-type-next{ width:25px; height:24px; border:1px solid #CCCCCC; border-left:none; font-size:5px; line-height:24px; text-align:center; padding-top:0; }
+.recharge .ul-2-4 .li-2-1 form .choose-type-next,.recharge .ul-2-4 .li-2-2 form .choose-time-next,.recharge .ul-2-4 .li-2-3 form .insure-xubao-next,.recharge .ul-2-4 .li-2-4 form .choose-time,.recharge .ul-2-4 .li-2-4 form .choose-time-next{ border-top:none; }
+.recharge .ul-2-4 .li-2-1 form .instant,.recharge .ul-2-4 .li-2-1 form .fast,.recharge .ul-2-4 .li-2-2 form .instant,.recharge .ul-2-4 .li-2-3 form .instant,.recharge .ul-2-4 .li-2-4 form .instant,.recharge .ul-2-4 .li-2-5 form .instant{ width:69px; height:27px; font-size:12px; font-weight:bold; margin-top:18px; border:none; background:#FF4400; color:#fff; }
+.recharge .ul-2-4 .li-2-2 form .instant,.recharge .ul-2-4 .li-2-3 form .instant,.recharge .ul-2-4 .li-2-4 form .instant,.recharge .ul-2-4 .li-2-5 form .instant{ width:106px; }
+.recharge .ul-2-4 .li-2-3 form .most-complete{ width:60px; height:12px; margin:15px 0 0 15px; color:#666666; }
+.recharge .ul-2-4 .li-2-3 form .most-complete:hover{ color:#FF6600; }
+.recharge .ul-2-4 .li-2-1 form .fast{ margin-left:14px; border:1px solid #DCDCDC; background:#fff; color:#000; }
+.recharge .ul-2-4 .li-2-1 form .active{ width:48px; height:12px; color:#666666; margin:17px 0 0 14px; }
+.recharge .ul-2-4 .li-2-1 form .active:hover{ color:#FF6600; }
+
+
+form,.games{ display:none; }
+.ul-2-1{ display:none; }
+/*JS动态效果前的默认样式准备工作*/
+.recharge .ul-2-1,.recharge .ul-2-2,.recharge .ul-2-3,.recharge .ul-2-4{ display:none; }
+/*.recharge .li-1:hover .ul-2-1,.recharge .li-1:hover .ul-2-2,.recharge .li-1:hover .ul-2-3,.recharge .li-1:hover .ul-2-4{ display:block; }*/
+.recharge .li-1:hover .formShow{ display:block; }
+.recharge .li-1:hover .act{ color:#FF4300; }
+.recharge .li-1-u:hover .act{ color:#FF4300; }/*鼠标移至一级菜单上，如充话费上，则下面的文字“充话费”颜色改变*/
+.recharge .li-2-1{ display:block; }
+.recharge .act a{ color:#FF4300; }/*如鼠标移至游戏，显示出下面的菜单，设置第一个“点卡”的颜色*/
+.recharge .bottomStyle{ border-bottom:1px solid #FF4400; }
+.recharge .li-2 .colorRed a{ color:#FF4300; }

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头部</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1472826674_867262.css">
+	<style>
+		*{ margin:0; padding:0; }
+		a{ text-decoration:none; }
+		li{ list-style:none; }
+		/*头部样式！！！！！！*/
+		#headwrap{ width:100%; border-bottom:1px solid #EEEEEE; background:#F5F5F5; }
+		#head{ width:1190px; height:35px; margin:0 auto; font-size:12px; line-height:35px; }
+		#head .left{ float:left; }
+		#head .left li{ float:left; }
+		#head .left .active{ color:#F22E00; }
+		#head .left a,#head .right a{ color:#6C6C6C; }
+		#head .left a:hover,#head .right a:hover{ color:#FF4400; }
+		#head .left-1{ padding-left:6px; }
+		#head .left-2{ padding-left:8px; }
+		#head .left-3{ padding-left:20px; }
+
+		#head .right{ float:right; }
+		#head .right li{ float:left; }
+		#head .right ul li{ float:none; }
+		#head .right ul{ display:none; position:absolute; left:-1px; top:35px; }
+		#head .right li:hover ul{ display:block; }
+		#head .right .nav-li-1:hover .ul-1{ display:block; }
+
+		#head .right .li-1{ position:relative; margin-right:1px; margin-left:1px; }
+		#head .right .nav-li-1{ position:relative; margin-right:1px; margin-left:1px;  }
+
+		#head .right .li-1 ul{ border:1px solid #EEEEEE; border-top:1px solid #fff; }
+		/*一级菜单的宽高*/
+		#head .right .my-taobao{ /*display:inline-block;*/ width:77px; height:35px; }
+		#head .right .shopping-cart { width:90; height:35px; }
+		#head .right .favorite { width:82px; height:35px; }
+		#head .right .classify{ width:80px; height:35px; }
+		#head .right .seller { width:77px; height:35px; }
+		#head .right .service { width:77px; height:35px; }
+		#head .right .navigation { width:94px; height:35px; }
+		
+		#head .right .li-1 .left{ float:none; margin-left:5px; margin-right:5px; }
+		#head .right .nav-li-1 .left{ float:none; margin-left:5px; margin-right:5px; }
+		/*#head .right .li-1 .icon-xiajiantou{ margin-left:5px; }*/
+		/*二级菜单的宽高*/
+		#head .right .my-taobao ul{ width:82px; height:64px; }
+		#head .right .shopping-cart ul{ width:312px; height:48px; }
+		#head .right .favorite ul{ width:70px; height:63px; }
+		#head .right .seller ul{ width:82px; height:176px; }
+		#head .right .service ul{ width:70px; height:64px; }
+		#head .right .navigation ul{ width:1188px; height:369px; }
+		/*通过设置鼠标移入前，margin的左右各1px像素；然后鼠标移入，margin的左右为0，来解决左右边框占位置而导致鼠标移入时菜单的晃动*/
+		#head .right .li-1:hover{ background:#fff; border:1px solid #EEEEEE; border-top:none; margin-left:0; margin-right:0; }
+		#head .right .nav-li-1:hover{ background:#fff; border:1px solid #EEEEEE; border-top:none; border-bottom:1px solid #fff; margin-left:0; margin-right:0; }
+		/*二级菜单样式（行高、hover时背景颜色）*/
+		#head .right .li-1 ul{ padding-top:8px; }
+		#head .right .li-1 li{ line-height:28px; }
+		#head .right .li-1 li a{ padding-left:6px; }
+		#head .right .li-1 li:hover{ background:#F5F5F5; }
+		#head .right .li-1 li:hover a{ color:#6C6C6C; }
+		/*字体图标的颜色变化*/
+		#head .right .icon-gouwuche{ color:#FF4400; }
+		#head .right .count{ font-weight:bold; color:#F22E00; }
+		#head .right .icon-shoucangjia{ color:#9C9C9C; }
+		#head .right .icon-shuxian{ color:#E1DDE1; }
+		#head .right .favorite:hover .icon-shoucangjia{ color:#FF4400; }
+		#head .right .icon-daohang{ color:#FF4400; }
+		/*网站导航栏 下面的样式*/
+		#head .right .navigation .ul-1{ display:none; position:absolute; left:-1095px; top:36px; border:1px solid #EEEEEE; border-top:none; }
+		#head .right .navigation .ul-1 .ul-2{ display:block; height:334px; }
+		#head .right .navigation .ul-1 .li-2{ float:left; width:296px; border-right:1px solid #EEEEEE; }
+		#head .right .navigation .ul-1 .d-4{ border-right:none; }
+
+		#head .right .navigation .ul-1 .d-1{ height:309px; }
+		#head .right .navigation .ul-1 .d-2{ height:369px; }
+		#head .right .navigation .ul-1 .d-3{ height:248px; }
+		#head .right .navigation .ul-1 .d-4{ height:370px; } 
+		#head .right .navigation .ul-1 h2{ padding-left:10px; }
+		#head .right .navigation .ul-1 .h2-1{ color:#FC4200; }
+		#head .right .navigation .ul-1 .h2-2{ color:#9FB838; }
+		#head .right .navigation .ul-1 .h2-3{ color:#D75696; }
+		#head .right .navigation .ul-1 .h2-4{ color:#2E9FDB; }
+
+		#head .right .navigation .ul-2{ position:relative; top:0; left:0; width:276px; margin-left:15px; }
+		#head .right .navigation .ul-2 li{ float:left; width:68px; height:12px; margin-bottom:18px; line-height:12px; }
+		#head .right .navigation .ul-2 li a{ display:inline-block; padding:6px; }
+		#head .right .navigation .d-1 li a:hover{ background:#FF5500; border-radius:4px; }
+		#head .right .navigation .d-2 li a:hover{ background:#A0B959; border-radius:4px; }
+		#head .right .navigation .d-3 li a:hover{ background:#DF61AB; border-radius:4px; }
+		#head .right .navigation .d-4 li a:hover{ background:#52A0E5; border-radius:4px; }
+
+		#head .right .navigation .ul-2 li a{ color:#3C3C3C; }
+		#head .right .navigation .w-2 li{ width:92px; }
+		#head .right .navigation .w-3 li{ width:138px; }
+
+		#head .right .navigation .hot{ background:url(img/head/hot.png) no-repeat right top; }
+		#head .right .navigation .n{ background:url(img/head/n.png) no-repeat right top; }
+	</style>
+	<script>
+		window.onload = function(){
+			var oHead = document.getElementById('head');
+			var aHot = oHead.getElementsByClassName('hot');
+			var aN = oHead.getElementsByClassName('n');
+			var oDaoHang = oHead.getElementsByClassName('navigation')[0];
+			var oUl_1 = oHead.getElementsByClassName('ul-1')[0];
+
+			var arr = [];
+			var timer = null;
+			for(var i=0; i<aHot.length; i++){
+				arr.push(aHot[i]);
+			}
+			for(var i=0; i<aN.length; i++){
+				arr.push(aN[i]);
+			}
+			console.log(oDaoHang);
+			// 当鼠标移至导航元素上时，背景图片开始跳动
+			oDaoHang.onmouseover = jump();
+			// oUl_1.onmouseover = jump();
+			// oDaoHang.onmouseout = function(){
+			// 	clearInterval(timer);
+			// }
+			function jump(){
+				// 通过设置flag,再根据flag的值来进行背景图片位置的切换，从而时背景图片实现上下跳动的动态效果
+				var flag = true;
+				clearInterval(timer);
+				timer = setInterval(function(){
+					if(flag){
+						for(var i=0; i<aHot.length; i++){
+							arr[i].style.background = 'url(img/head/hot.png) no-repeat right 2px'
+						}
+						for(var i=aHot.length-1; i<arr.length; i++){
+							arr[i].style.background = 'url(img/head/n.png) no-repeat right 2px'
+						}
+						flag = false;
+					}else{
+						for(var i=0; i<aHot.length; i++){
+							arr[i].style.background = 'url(img/head/hot.png) no-repeat right top'
+						}
+						for(var i=aHot.length-1; i<arr.length; i++){
+							arr[i].style.background = 'url(img/head/n.png) no-repeat right top'
+						}
+						flag = true;
+					}
+				},500);
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="headwrap">
+		<div id="head">
+			<ul class="left">
+				<li><a class="active left-1" href="#">亲，请登录</a></li>
+				<li><a class="left-2" href="#">免费注册</a></li>
+				<li><a class="left-3" href="#">手机逛淘宝</a></li>
+			</ul>
+			<ul class="right">
+				<li class="li-1 my-taobao"><a class="left" href="#">我的淘宝</a><span class="iconfont icon-xiajiantou"></span>
+					<ul>
+						<li><a href="#">已买到的宝贝</a></li>
+						<li><a href="#">我的足迹</a></li>
+					</ul>
+				</li>
+				<li class="li-1 shopping-cart"><span class="left iconfont icon-gouwuche"></span><a href="#">购物车<span class="count">0</span></a><span class="iconfont icon-xiajiantou"></span>
+					<ul></ul>
+				</li>
+				<li class="li-1 favorite"><span class="left iconfont icon-shoucangjia"></span><a href="#">收藏夹</a><span class="iconfont icon-xiajiantou"></span>
+					<ul>
+						<li><a href="#">收藏的宝贝</a></li>
+						<li><a href="#">收藏的店铺</a></li>
+					</ul>
+				</li>
+				<li class="li-1 classify"><a class="left" href="#">商品分类</a><span class="iconfont icon-shuxian"></span>
+				</li>
+				<li class="li-1 seller"><a class="left" href="#">卖家中心</a><span class="iconfont icon-xiajiantou"></span>
+					<ul>
+						<li><a href="#">免费开店</a></li>
+						<li><a href="#">已卖出的宝贝</a></li>
+						<li><a href="#">出售中的宝贝</a></li>
+						<li><a href="#">卖家服务市场</a></li>
+						<li><a href="#">卖家培训中心</a></li>
+						<li><a href="#">体检中心</a></li>
+					</ul>
+				</li>
+				<li class="li-1 service"><a class="left" href="#">联系客服</a><span class="iconfont icon-xiajiantou"></span>
+					<ul>
+						<li><a href="#">消费者客服</a></li>
+						<li><a href="#">卖家客服</a></li>
+					</ul>
+				</li>
+				<!-- 网站导航 -->
+				<li class="nav-li-1 navigation"><span class="left iconfont icon-daohang"></span><a href="#">网站导航</a><span class="iconfont icon-xiajiantou"></span>
+					<ul class="ul-1">
+						<li class="li-2 d-1"><h2 class="h2-1">主题市场</h2>
+							<ul class="ul-2">
+								<li><a class="hot" href="#">女装</a></li>
+								<li><a href="#">男装</a></li>
+								<li><a href="#">内衣</a></li>
+								<li><a href="#">鞋靴</a></li>
+								<li><a href="#">箱包</a></li>
+								<li><a href="#">婴童</a></li>
+								<li><a class="n" href="#">家电</a></li>
+								<li><a href="#">数码</a></li>
+								<li><a href="#">手机</a></li>
+								<li><a href="#">美妆</a></li>
+								<li><a href="#">珠宝</a></li>
+								<li><a href="#">眼镜</a></li>
+								<li><a href="#">手表</a></li>
+								<li><a href="#">运动</a></li>
+								<li><a href="#">户外</a></li>
+								<li><a href="#">乐器</a></li>
+								<li><a href="#">游戏</a></li>
+								<li><a href="#">动漫</a></li>
+								<li><a href="#">影视</a></li>
+								<li><a href="#">美食</a></li>
+								<li><a href="#">鲜花</a></li>
+								<li><a href="#">宠物</a></li>
+								<li><a href="#">农资</a></li>
+								<li><a href="#">房产</a></li>
+								<li><a href="#">装修</a></li>
+								<li><a href="#">建材</a></li>
+								<li><a class="hot" href="#">家居</a></li>
+								<li><a href="#">百货</a></li>
+								<li><a href="#">汽车</a></li>
+								<li><a href="#">二手车</a></li>
+								<li><a href="#">办公</a></li>
+								<li><a href="#">企业购</a></li>
+								<li><a href="#">定制</a></li>
+								<li><a href="#">教育</a></li>
+								<li><a href="#">卡券</a></li>
+								<li><a href="#">本地</a></li>
+							</ul>
+						</li>
+						<li class="li-2 d-2"><h2 class="h2-2">特色市场</h2>
+							<ul class="ul-2 w-2">
+								<li><a class="n" href="#">iFashion</a></li>
+								<li><a href="#">爱逛街</a></li>
+								<li><a href="#">美妆秀</a></li>
+								<li><a class="hot" href="#">全球购</a></li>
+								<li><a href="#">腔调</a></li>
+								<li><a href="#">淘女郎</a></li>
+								<li><a href="#">星店</a></li>
+								<li><a href="#">汇吃</a></li>
+								<li><a href="#">格调</a></li>
+								<li><a href="#">运动派</a></li>
+								<li><a class="hot" href="#">极有家</a></li>
+								<li><a href="#">特色中国</a></li>
+								<li><a href="#">潮店街</a></li>
+								<li><a href="#">拍卖会</a></li>
+								<li><a href="#">淘宝众筹</a></li>
+								<li><a href="#">中国质造</a></li>
+								<li><a href="#">质+</a></li>
+								<li><a href="#">阿里旅行</a></li>
+								<li><a class="n" href="#">亲宝贝</a></li>
+								<li><a href="#">闲鱼</a></li>
+								<li><a href="#">桃花源</a></li>
+								<li><a href="#">农资</a></li>
+								<li><aclass="hot"  href="#">天天特价</a></li>
+								<li><a href="#">清仓</a></li>
+								<li><a href="#">俪人购</a></li>
+								<li><a href="#">聚名品</a></li>
+								<li><a href="#">淘抢购</a></li>
+								<li><a href="#">生活汇</a></li>
+								<li><a href="#">全球精选</a></li>
+								<li><a href="#">非常大牌</a></li>
+								<li><a href="#">试用</a></li>
+								<li><a href="#">量贩团</a></li>
+								<li><a href="#">阿里翻译</a></li>
+							</ul>
+						</li>
+						<li class="li-2 d-3"><h2 class="h2-3">阿里APP</h2>
+							<ul class="ul-2 w-2">
+								<li><a class="hot" href="#">淘宝</a></li>
+								<li><a href="#">天猫</a></li>
+								<li><a href="#">支付宝</a></li>
+								<li><a href="#">聚划算</a></li>
+								<li><a href="#">去啊</a></li>
+								<li><a class="n" href="#">蚂蚁聚宝</a></li>
+								<li><a href="#">旺信</a></li>
+								<li><a class="hot" href="#">闲鱼</a></li>
+								<li><a href="#">阿里钱盾</a></li>
+								<li><a class="hot" href="#">钉钉</a></li>
+								<li><a href="#">高德地图</a></li>
+								<li><a href="#">点点虫</a></li>
+								<li><a href="#">虾米音乐</a></li>
+								<li><a href="#">淘宝电影</a></li>
+								<li><a class="n" href="#">菜鸟裹裹</a></li>
+								<li><a href="#">爱逛街</a></li>
+								<li><a href="#">拍卖会</a></li>
+								<li><a href="#">阿里云</a></li>
+								<li><a href="#">网商银行</a></li>
+								<li><a class="n" href="#">阿里邮箱</a></li>
+								<li><a href="#">阿里众包</a></li>
+							</ul>
+						</li>
+						<li class="li-2 d-4"><h2 class="h2-4">精彩推荐集</h2>
+							<ul class="ul-2 w-3">
+								<li><a class="hot" href="#">余额宝</a></li>
+								<li><a href="#">大牌捡宝</a></li>
+								<li><a href="#">淘公仔</a></li>
+								<li><a href="#">浏览器</a></li>
+								<li><a href="#">淘宝香港</a></li>
+								<li><a href="#">淘宝台湾</a></li>
+								<li><a href="#">淘宝全球</a></li>
+								<li><a href="#">淘宝东南亚</a></li>
+								<li><a href="#">闺蜜淘货</a></li>
+								<li><a href="#">淘宝视频</a></li>
+								<li><a href="#">大众评审</a></li>
+								<li><a class="n" href="#">淘工作</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>	
+	</div>
+	<div id="other" style="height:2000px;"></div>
+</body>
+</html>

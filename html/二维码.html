@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二维码</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1472715617_6547666.css">
+	<style>
+		*{ margin:0; padding:0; }
+		a{ text-decoration:none; }
+		li{ list-style:none; }
+
+		/*二维码样式！！！！！！*/
+		.QR-code{ width:115px; height:114px; }
+		.QR-code li{ float:left; }
+		.QR-code .close{ display:inline-block; width:18px; height:18px; border:1px solid #EEEEEE; border-right:none; color:#EEEEEE; text-align:center; line-height:18px; }
+		.QR-code img{ border:1px solid #EEEEEE; }
+	</style>
+	<script>
+		window.onload = function(){
+			var oQR = document.getElementsByClassName('QR-code')[0];
+			var oClose = oQR.getElementsByClassName('close')[0];
+
+			oClose.onclick = function(){
+				oQR.style.display = 'none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="QR-code">
+		<li><a class="close iconfont icon-cha" href="#" javascript:;></a></li>
+		<li><a href=""><img src="img/QR-code/1.png" alt=""></a></li>
+	</div>
+</body>
+</html>

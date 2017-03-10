@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>headline</title>
+	<style>
+		*{ margin: 0; padding: 0; outline: none; }
+		a{ text-decoration: none; }
+		li{ list-style: none; }
+		.clear { zoom:1; }   /* ==for IE6/7 Maxthon2==*/
+		.clear :after { clear:both; content:'.'; display:block; width: 0; height: 0; visibility:hidden;}  /* ==for FF/chrome/opera/IE8== */
+
+		#headline{ display: inline-block; width: 290px; height: 110px; background: #fff;  }
+		#headline .title{ width: 290px; height: 30px; margin-bottom: 10px; }
+		#headline h2{ float: left; width: 60px; height: 17px; background: url(img/headline/title.png); margin: 10px 0 0 10px; }
+		#headline .more{ float: left; width: 32px; height: 20px; font-size: 12px; color: #3C3C3C; margin: 10px 0 0 176px; text-align: center; line-height: 20px; }
+		#headline .more:hover{ color: #FF4400; }
+		#headline .content{ width: 290px; height: 60px; display: inline-block; overflow: hidden; overflow: hidden; }
+		#headline .content-1,#headline .content-2,#headline .content-3{ width: 290px; height: 60px; }
+		#headline .content-1:hover h3,#headline .content-2:hover h3,#headline .content-3:hover h3{ color: #FF4400; }
+		#headline .content-1:hover img,#headline .content-2:hover img,#headline .content-3:hover img{ opacity: 0.5; }
+		#headline .content img{ float: left; margin: 0 10px 0  2px; 
+			-webkit-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+		#headline .content h3{ float: left; width: 208px; height: 14px; font-size: 14px; font-weight: bold; color: #333333; margin-top: 2px; }
+		#headline .content p{ float: left; width: 208px; height: 35px; font-size: 12px; line-height: 16px; color: #666666; margin-top: 9px; }
+		#headline .wrap{ width: 290px; height: 180px; position: relative; top: 0px;  }
+	</style>
+	<script src="js/move.js"></script>
+	<script>
+		window.onload = function(){
+			var oHeadline = document.getElementById('headline');
+			var oWrap = oHeadline.getElementsByClassName('wrap')[0];
+			var oContent = oHeadline.getElementsByClassName('content')[0];
+			var num = 0;
+			var timer = null;
+			var flag = true;
+			timer = setInterval(function(){
+				startMove(oWrap,{ top: -num*60 },7,13);
+				if(flag){//正序
+					if(num < 2){
+						num ++;
+					}else{
+						num --;
+						flag = false;
+					}
+				}else{//反序
+					if(num>0){
+						num --;
+					}else{
+						num ++;
+						flag = true;
+					}
+				}
+			},2000)
+			oContent.onmouseover = function(){
+				clearInterval(timer);
+			}
+			oContent.onmouseout = function(){
+				timer = setInterval(function(){
+					startMove(oWrap,{ top: -num*60 },7,13);
+					if(flag){//正序
+						if(num < 2){
+							num ++;
+						}else{
+							num --;
+							flag = false;
+						}
+					}else{//反序
+						if(num>0){
+							num --;
+						}else{
+							num ++;
+							flag = true;
+						}
+					}
+				},2000)
+			}
+		}
+	</script>
+</head>
+<body style="background: #f1f1f1">
+	<div id="headline">
+		<div class="title">
+			<h2></h2>
+			<a href="#" class="more">更多></a>
+		</div>
+		<a href="#" class="content clear">
+			<div class="wrap">
+				<div class="content-1">
+					<img src="img/headline/bg1.png" alt="">
+					<h3>深秋待产包都要准备哪些东西</h3>
+					<p>待产包是准爸妈们都需要准备好的，但是待产包都要准备哪些东西呢？很</p>
+				</div>
+				<div class="content-2">				<img src="img/headline/bg2.png" alt="">
+					<h3>胖脸女生，如何改造精致小v</h3>
+					<p>在这个以瘦为美的时代，许多妹子都为自己圆圆的脸蛋感到苦恼：和朋友</p>
+				</div>
+				<div class="content-3">
+					<img src="img/headline/bg3.png" alt="">
+					<h3>女人胖点才好，不信胖mm们看</h3>
+					<p>胖一点的女人才可爱，她自带萌感，圆圆的苹果脸好想伸手捏。不像锥子</p>
+				</div>
+			</div>	
+		</a>
+	</div>
+</body>
+</html>

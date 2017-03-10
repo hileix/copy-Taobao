@@ -1,0 +1,91 @@
+/*头部样式！！！！！！*/
+#headwrap{ width:100%; border-bottom:1px solid #EEEEEE; background:#F5F5F5; }
+#head{ width:1190px; height:35px; margin:0 auto; font-size:12px; line-height:35px; }
+#head .left{ float:left; }
+#head .left li{ float:left; }
+#head .left .active{ color:#F22E00; }
+#head .left a,#head .right a{ color:#6C6C6C; }
+#head .left a:hover,#head .right a:hover{ color:#FF4400; }
+#head .left-1{ padding-left:6px; }
+#head .left-2{ padding-left:8px; }
+#head .left-3{ padding-left:20px; }
+
+#head .right{ float:right; }
+#head .right li{ float:left; }
+#head .right ul li{ float:none; }
+#head .right ul{ display:none; position:absolute; left:-1px; top:35px; }
+#head .right li:hover ul{ display:block; }
+#head .right .nav-li-1:hover .ul-1{ display:block; }
+
+#head .right .li-1{ position:relative; margin-right:1px; margin-left:1px; }
+#head .right .nav-li-1{ position:relative; margin-right:1px; margin-left:1px;  }
+
+#head .right .li-1 ul{ border:1px solid #EEEEEE; border-top:1px solid #fff; }
+/*一级菜单的宽高*/
+#head .right .my-taobao{ /*display:inline-block;*/ width:77px; height:35px; }
+#head .right .shopping-cart { width:90; height:35px; }
+#head .right .favorite { width:82px; height:35px; }
+#head .right .classify{ width:80px; height:35px; }
+#head .right .seller { width:77px; height:35px; }
+#head .right .service { width:77px; height:35px; }
+#head .right .navigation { width:94px; height:35px; }
+
+#head .right .li-1 .left{ float:none; margin-left:5px; margin-right:5px; }
+#head .right .nav-li-1 .left{ float:none; margin-left:5px; margin-right:5px; }
+/*#head .right .li-1 .icon-xiajiantou{ margin-left:5px; }*/
+/*二级菜单的宽高*/
+#head .right .my-taobao ul{ width:82px; height:64px; }
+#head .right .shopping-cart ul{ width:312px; height:48px; }
+#head .right .favorite ul{ width:70px; height:63px; }
+#head .right .seller ul{ width:82px; height:176px; }
+#head .right .service ul{ width:70px; height:64px; }
+#head .right .navigation ul{ width:1188px; height:369px; }
+/*通过设置鼠标移入前，margin的左右各1px像素；然后鼠标移入，margin的左右为0，来解决左右边框占位置而导致鼠标移入时菜单的晃动*/
+#head .right .li-1:hover{ background:#fff; border:1px solid #EEEEEE; border-top:none; margin-left:0; margin-right:0; }
+#head .right .nav-li-1:hover{ background:#fff; border:1px solid #EEEEEE; border-top:none; border-bottom:1px solid #fff; margin-left:0; margin-right:0; }
+/*二级菜单样式（行高、hover时背景颜色）*/
+#head .right .li-1 ul{ padding-top:8px; }
+#head .right .li-1 li{ line-height:28px; }
+#head .right .li-1 li a{ padding-left:6px; }
+#head .right .li-1 li:hover{ background:#F5F5F5; }
+#head .right .li-1 li:hover a{ color:#6C6C6C; }
+/*字体图标的颜色变化*/
+#head .right .icon-gouwuche{ color:#FF4400; }
+#head .right .count{ font-weight:bold; color:#F22E00; }
+#head .right .icon-shoucangjia{ color:#9C9C9C; }
+#head .right .icon-shuxian{ color:#E1DDE1; }
+#head .right .favorite:hover .icon-shoucangjia{ color:#FF4400; }
+#head .right .icon-daohang{ color:#FF4400; }
+/*网站导航栏 下面的样式*/
+#head .right .navigation .ul-1{ display:none; position:absolute; left:-1095px; top:36px; border:1px solid #EEEEEE; border-top:none; background: #fff; }
+#head .right .navigation .ul-1 .ul-2{ display:block; height:334px; }
+#head .right .navigation .ul-1 .li-2{ float:left; width:296px; border-right:1px solid #EEEEEE; }
+#head .right .navigation .ul-1 .d-4{ border-right:none; }
+
+#head .right .navigation .ul-1 .d-1{ height:309px; }
+#head .right .navigation .ul-1 .d-2{ height:369px; }
+#head .right .navigation .ul-1 .d-3{ height:248px; }
+#head .right .navigation .ul-1 .d-4{ height:370px; } 
+#head .right .navigation .ul-1 h2{ padding-left:10px; }
+#head .right .navigation .ul-1 .h2-1{ color:#FC4200; }
+#head .right .navigation .ul-1 .h2-2{ color:#9FB838; }
+#head .right .navigation .ul-1 .h2-3{ color:#D75696; }
+#head .right .navigation .ul-1 .h2-4{ color:#2E9FDB; }
+
+#head .right .navigation .ul-2{ position:relative; top:0; left:0; width:276px; margin-left:15px; }
+#head .right .navigation .ul-2 li{ float:left; width:68px; height:12px; margin-bottom:18px; line-height:12px; }
+#head .right .navigation .ul-2 li a{ display:inline-block; padding:6px; }
+#head .right .navigation .d-1 li a:hover{ background:#FF5500; border-radius:4px; }
+#head .right .navigation .d-2 li a:hover{ background:#A0B959; border-radius:4px; }
+#head .right .navigation .d-3 li a:hover{ background:#DF61AB; border-radius:4px; }
+#head .right .navigation .d-4 li a:hover{ background:#52A0E5; border-radius:4px; }
+
+#head .right .navigation .ul-2 li a{ color:#3C3C3C; }
+#head .right .navigation .w-2 li{ width:92px; }
+#head .right .navigation .w-3 li{ width:138px; }
+
+#head .right .navigation .hot{ background:url(../img/head/hot.png) no-repeat right top; }
+#head .right .navigation .n{ background:url(../img/head/n.png) no-repeat right top; }
+
+#head .right .navigation:hover .ul-1{ z-index: 1; }
+#head .right .li-1:hover ul{ background: #fff; z-index: 1; }

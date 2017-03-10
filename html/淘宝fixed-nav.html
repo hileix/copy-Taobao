@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝fixed-nav</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1473770118_6243696.css">
+	<style>
+		*{ margin: 0; padding: 0; }
+		a{ text-decoration: none; }
+		li{ list-style: none; }
+
+		.fixed-nav{ width: 50px; height: 392px; margin: 20px 0 0 20px; position: absolute; top: 489px; right: 19px; background-color: #fff; }
+		.fixed-nav li{ display: inline-block; width: 50px; height: 48px; text-align: center; background: #fff; }
+		.fixed-nav li:hover a{ color: #fff; border: none; margin-top: 1px; }
+		.fixed-nav li a{ display: inline-block; font-size: 14px; font-weight: bold; width: 30px; line-height: 50px; padding: 0 4px 0 4px; border-top: 1px solid #EFEFEF; }
+
+		.fixed-nav .often a,.fixed-nav .guess-like a,.fixed-nav .report a,.fixed-nav .top-span{ font-size: 12px; line-height: 16px; padding-top: 10px; padding-bottom: 6px; }
+
+		.fixed-nav .often a{  color: #FF4400; border: none;  }
+		.fixed-nav .often:hover{ background: #FF4400; }
+		.fixed-nav .fashion a{ color: #FF0055; }
+		.fixed-nav .fashion:hover{ background: #FF0055; }
+		.fixed-nav .quality a{ color: #8D7AFB; }
+		.fixed-nav .quality:hover{ background: #8D7AFB; }
+		.fixed-nav .feature a{ color: #AEC413; }
+		.fixed-nav .feature:hover{ background: #AEC413; }
+		.fixed-nav .benefits a{ color: #A2745B; }
+		.fixed-nav .benefits:hover{ background: #A2745B; }
+		.fixed-nav .guess-like a{ color: #FF4400; }
+		.fixed-nav .guess-like:hover{ background: #FF4400; }
+		.fixed-nav .couple-back a,.fixed-nav .report a,.fixed-nav .top a{ font-weight: normal; color: #000; }
+		.fixed-nav .couple-back:hover,.fixed-nav .report:hover,.fixed-nav .top:hover a{ background-color: #FF4400; }
+
+		.fixed-nav .top{ display: none; }
+		.fixed-nav .top a{ float:left; width: 38px; height: 48px; }
+		.fixed-nav .arrows{ display: inline-block; width: 34px; height: 20px; line-height: 20px; position: relative; top: -14px; }
+		.fixed-nav .top-span{ display: inline-block; width: 34px; height: 28px; padding: 0; margin: 0; line-height: 28px; position: relative; top: -40px; }
+
+
+	</style>
+	<script>
+		window.onload = function(){
+			var fixed_nav = document.getElementsByClassName('fixed-nav')[0];
+			var oTop = fixed_nav.getElementsByClassName('top')[0];
+			//使用事件监听，同一个事件绑定不同的事件处理函数（与fixed-search）
+			addEventListener("scroll",fn2,false);
+			function fn2(){
+				var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+				if(scroll >= 690){ 
+					oTop.style.display = "inline-block";
+					fixed_nav.style.background = '#fff';
+				}else{ 
+					oTop.style.display = "none";
+				}
+				if(scroll >= 489){
+					fixed_nav.style.position = 'fixed';
+					fixed_nav.style.top = '50px';
+				}else{ 
+					fixed_nav.style.position = 'absolute';
+					fixed_nav.style.top = '489px';
+				}
+			}
+//			window.onscroll = function(){
+//				var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+//				if(scroll >= 690){ 
+//					oTop.style.display = "inline-block";
+//					fixed_nav.style.background = '#fff';
+//				}else{ 
+//					oTop.style.display = "none";
+//				}
+//				if(scroll >= 489){
+//					fixed_nav.style.position = 'fixed';
+//					fixed_nav.style.top = '50px';
+//				}else{ 
+//					fixed_nav.style.position = 'absolute';
+//					fixed_nav.style.top = '489px';
+//				}
+//			}
+		}
+	</script>
+</head>
+<body style="background: #eee;">
+	<div class="fixed-nav">
+		<ul>
+			<li class="often"><a href="javascript:;">我常逛的</a></li>
+			<li class="fashion"><a href="javascript:;">时尚</a></li>
+			<li class="quality"><a href="javascript:;">品质</a></li>
+			<li class="feature"><a href="javascript:;">特色</a></li>
+			<li class="benefits"><a href="javascript:;">实惠</a></li>
+			<li class="guess-like"><a href="javascript:;">猜你喜欢</a></li>
+			<li class="top"><a href="javascript:;"><span class="arrows iconfont icon-jiantoushang"></span><span class="top-span">顶部</span></a></li>
+			<li class="couple-back"><a href="javascript:;">反馈</a></li>
+			<li class="report"><a href="javascript:;">暴恐举报</a></li>
+		</ul>
+	</div>
+	<div style="height: 2000px;"></div>
+</body>
+</html>

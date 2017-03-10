@@ -1,0 +1,59 @@
+.my-often-visit .section{ width: 440px; height: 362px; display: inline-block; background: #fff; margin: 0; }
+.my-often-visit .section .left{ width: 100px; height: 362px; float: left; background: #459AC4; }
+.my-often-visit .section .right{ float: right; width: 338px; height: 358px; border: 2px solid #C6D3EC; border-left: none; font-size: 12px; }
+.my-often-visit .section .right:hover{ border-color: #406CC0; }
+		
+.my-often-visit .section .left .img-wrap{ display: inline-block; height: 100px; padding: 0; margin: 0; }
+.my-often-visit .section .left h3{ width: 92px;height: 19px; font-size: 14px; color: #fff; font-weight: bold; padding: 9px 0 0 8px; }
+.my-often-visit .section .left a{ display: inline-block; font-size: 12px; color: #fff; padding: 4px 8px; margin: 3px 0 0 8px; background: #6AAED0; }
+.my-often-visit .section .left a:hover{ background: #fff; color: #FF5500; }
+
+.my-often-visit .section .right a{ float: left; } 
+/*解决a标签下有img标签时，img标签下面会有空隙的问题（a + img 在浏览器中会产生空白）*/
+.my-often-visit .section .right a img{ vertical-align: bottom; } 
+.my-often-visit .section .right .a-1,.my-often-visit .section .right .a-2{ border-right: 1px solid #EFEFEF; }
+.my-often-visit .section .right .a-3,/*.my-often-visit .section .right .a-4,*/.my-often-visit .section .right .a-6{ border-bottom: 1px solid #EFEFEF; }
+.my-often-visit .section .right .a-3{ width: 136px; height: 98px; }
+.my-often-visit .section .right .a-4{ width: 136px; height: 101px; }
+.my-often-visit .section .right .a-5{ border-top: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF; width: 201px; height: 158px;}
+.my-often-visit .section .right .a-6{ width: 136px; height: 80px; position: relative; border-top: 1px solid #EFEFEF; }
+.my-often-visit .section .right .a-7{ width: 136px; height: 78px; position: relative; }
+/*a-3*/
+.my-often-visit .section .right .a-3 .intro{ float: left; margin: 17px 0 0 6px; }
+.my-often-visit .section .right .a-3 img{ float: right; margin-top: 18px; }
+.my-often-visit .section .right .a-3 h3{ font-size: 12px; margin-bottom: 7px; }
+.my-often-visit .section .right .a-3:hover h3{ color: #FF4400; }
+/*a-4*/
+.my-often-visit .section .right .a-4 .intro{ float: left; margin: 17px 0 0 6px; }
+.my-often-visit .section .right .a-4 img{ float: right; margin-top: 20px; }
+.my-often-visit .section .right .a-4 h3{ font-size: 12px; margin-bottom: 7px; }
+.my-often-visit .section .right .a-4:hover h3{ color: #FF4400; }
+/*a-5*/
+.my-often-visit .section .right .a-5 .wrap-1{ width: 180px; height: 140px;margin: 10px 0 0 10px;  position: relative; overflow: hidden; }
+.my-often-visit .section .right .a-5 .wrap-move{ width: 180px; height: 87px; position: absolute; top: 116px; font-size: 12px; }
+.my-often-visit .section .right .a-5 h3{ float: left; font-size: 12px; font-weight: normal; width: 130px; height: 24px; background: #fff; opacity: 0.8; color: #000; line-height: 24px; text-align: center; }
+.my-often-visit .section .right .a-5:hover h3{ color: #FF4400; }
+.my-often-visit .section .right .a-5:hover .img-wrap{ background: #fff; opacity: 0.9; }
+.my-often-visit .section .right .a-5 span{ float: left; width: 50px; height: 24px; color: #fff; background: #459AC4; line-height: 24px; text-align: center; }
+.my-often-visit .section .right .a-5 p{ float: left; width: 174px; height: 62px; line-height: 20px; padding: 1px 0 0 6px; color: #666666; background: #fff; opacity: 0.8; }
+/*a-6*/
+.my-often-visit .section .right .a-6 img{ margin: 8px 0 0 8px; }
+.my-often-visit .section .right .a-6 h3{ width: 120px; height: 20px; background: #fff; font-size: 12px; color: #3C3C3C; line-height: 20px; text-align: center; position: absolute; left: 8px; top: 53px; opacity: 0.8; font-weight: normal; }
+.my-often-visit .section .right .a-6:hover h3{ color: #FF4400; opacity: 1; }
+/*a-7*/
+.my-often-visit .section .right .a-7 img{ margin: 8px 0 0 8px; }
+.my-often-visit .section .right .a-7 h3{ width: 120px; height: 20px; background: #fff; font-size: 12px; color: #3C3C3C; line-height: 20px; text-align: center; position: absolute; left: 8px; top: 53px; opacity: 0.8; font-weight: normal; }
+.my-often-visit .section .right .a-7:hover h3{ color: #FF4400; opacity: 1; }
+	
+/*my-often-visit*/
+.my-often-visit{ width: 889px; position: relative; margin-top: 18px; }
+.my-often-visit h2{ width: 220px; height: 20px; line-height: 20px; display: inline-block; font-size: 18px; color: #323232; background: url(../img/my-often-visit/1.png) no-repeat; text-indent: 86px; margin-left: 340px;  }
+.my-often-visit .more{ width: 60px; height: 20px; line-height: 20px; border-radius: 10px; color: #3C3C3C; font-size: 12px; background: #fff; text-align: center; position: absolute; right: 0; top: 5px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.my-often-visit .more:hover{ background: #FF4400; color: #fff; }
+.my-often-visit .section-1,.my-often-visit .section-3,.my-often-visit .section-4{ margin-top: 10px; }
+.my-often-visit .section-2{ /*margin-top: 4px;*/ }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>popularity</title>
+	<style>
+		*{ margin: 0; padding: 0; }
+		a{ text-decoration: none; }
+		li{ list-style: none; }
+		/*popularity样式*/
+		.popularity *{ float: left; }
+		.popularity{ background: #fff; display: inline-block; }
+		.popularity li{  }
+		.popularity a{ width: 179px; height: 76px; }
+		.popularity .img-bg{ width: 62px; height: 62px; margin: 8px 0 0 10px; border: 1px solid #EDEDED; border-radius: 50%; padding-left: 0; }
+		.popularity h2,.popularity p,.popularity span{ display: inline-block; padding-left: 8px; }
+		.popularity h2{ font-size: 16px; font-weight: bold; height: 20px; padding-top: 8px; line-height: 20px; }
+		.popularity p{ font-size: 12px; color: #9A745F; padding-top: 5px; }
+		.popularity .people{ font-size: 12px; color: #999999; padding-top: 8px; padding-left: 26px; background: url(img/popularity/hot.png) no-repeat 8px 7px; }
+		
+		.popularity .li-1 h2,.popularity .li-1 p{ color: #A58471; }
+		.popularity .li-2 h2,.popularity .li-2 p{ color: #81C18F; }
+		.popularity .li-3 h2,.popularity .li-3 p{ color: #72A5F6; }
+		.popularity .li-4 h2,.popularity .li-4 p{ color: #846FC7; }
+		.popularity .li-5 h2,.popularity .li-5 p{ color: #DE525E; }
+		
+		.popularity .li-1:hover .img-bg{ border-color: #A58471; }
+		.popularity .li-2:hover .img-bg{ border-color: #81C18F; }
+		.popularity .li-3:hover .img-bg{ border-color: #72A5F6; }
+		.popularity .li-4:hover .img-bg{ border-color: #846FC7; }
+		.popularity .li-5:hover .img-bg{ border-color: #DE525E; }
+	</style>
+	<script>
+		window.onload = function(){
+			var oPopularity = document.getElementsByClassName('popularity')[0];
+			var aImgBg = oPopularity.getElementsByClassName('img-bg');
+			//使用js对背景图片进行初始化，这样可以省很多css代码
+			for(var i=0; i<aImgBg.length; i++){
+				aImgBg[i].style.background = 'url(img/popularity/' + (i+1) + '.jpg)';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="popularity">
+		<ul>
+			<li class="li-1"><a href="#">
+				<span class="img-bg"></span>
+				<h2>就爱设计感</h2>
+				<p>我们不平庸</p>
+				<span class="people">人气106215</span>
+			</a></li>
+			<li class="li-2"><a href="#">
+				<span class="img-bg"></span>
+				<h2>可惜是水瓶</h2>
+				<p>不潮不花钱</p>
+				<span class="people">人气105537</span>
+			</a></li>
+			<li class="li-3"><a href="#">
+				<span class="img-bg"></span>
+				<h2>韩范小妖精</h2>
+				<p>实力撩获欧巴</p>
+				<span class="people">人气120397</span>
+			</a></li>
+			<li class="li-4"><a href="#">
+				<span class="img-bg"></span>
+				<h2>名媛贵妇</h2>
+				<p>享受真优雅</p>
+				<span class="people">人气47541</span>
+			</a></li>
+			<li class="li-5"><a href="#">
+				<span class="img-bg"></span>
+				<h2>复古女郎</h2>
+				<p>上了复古的瘾</p>
+				<span class="people">人气28777</span>
+			</a></li>
+		</ul>
+	</div>
+</body>
+</html>

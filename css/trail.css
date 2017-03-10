@@ -1,0 +1,12 @@
+.trail-wrap{ width: 100%; height: 116px; margin-top: 20px;  }
+.trail{ width: 1190px; height: 116px; margin: 0 auto; }
+.trail *{ float: left; }
+.trail a,.trail p{ font-size: 12px; }
+.trail a{ color: #6C6C6C; margin-right: 9px; }
+.trail a:hover{ color: #FF4400; }
+.trail  p{ color: #9C9C9C; }
+.trail .ul-1{ margin: 12px 0 14px 4px; }
+.trail .ul-2{ margin: 0 0 10px 4px; }
+.trail .ul-3 a{ margin-right: 0; }
+.trail .ul-3 li{ margin: 0 23px 0 4px; }
+.trail .iconfont { color: #E0E0E0; }

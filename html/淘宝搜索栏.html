@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝搜索栏</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1472648424_9052143.css">
+	<style>
+		*{ margin:0; padding:0; }
+		a{ text-decoration:none; }
+		li{ list-style:none; }
+		.clear { zoom:1; }/*这两句是用来清浮动的*/
+		.clear:after { content:''; display:block; clear:both; }
+		/*搜索栏样式！！！！！！！！！！！！！*/
+		.search{ width:658px; height:86px; margin:20px 0 0 20px; font-size:12px; position:relative; }
+		.search .title a{ float:left; width:50px; height:25px; line-height:25px; text-align:center; color:#FF4400; }
+		.search .title a:hover{ background:#F9E6E6; color:#C60000; }
+		.search .title .active,.search .title .active:hover{ background:#FF5400; font-weight:bold; color:#fff; }
+
+		.search .form{ float:left; width:626px; height:40px; position:relative; }
+		.search .form .text{ float:left; outline:none; width:472px; height:34px; border:3px solid #FF5500; border-right:none; text-indent:12px; background:url(img/search/1.png) no-repeat 13px 11px;  }
+		.search .form .text-2,.search .form .text-3{ float:left; outline:none; width:500px; height:34px; border:3px solid #C60000; border-right:none; text-indent:12px; background:url(img/search/2.png) no-repeat 13px 11px;  }
+		.search .form .text-3{ border-color:#FF5500; }
+
+
+		.search .form .wrap{ position:absolute; left:475px;  width:28px; height:34px; /*background:#eee;*/ border-top:3px solid #FF5500; border-bottom:3px solid #FF5500; }
+		.search .form .icon-xiangji{ font-weight:bold; text-align:center; line-height:34px; }
+		.search .form .icon-xiangji:hover{ color:#FF5010; }
+		.search .form .file{ /*float:left;*/ position:absolute; left:0; outline:none; width:17px; height:13px; opacity:0; margin:6px 0 0 6px;  }
+		/*提交按钮用绝对定位，这样，提交按钮就脱离文档流，file空间不会对其影响（本来file控件会延伸到提交按钮里面去，这样就不会了）*/
+		.search .form .submit{ /*float:left;*/ position:absolute; left:475px; outline:none; width:122px; height:40px; background:#FF4200; border:none; font-size:17px; font-weight:bold; color:#fff; margin-left:28px; zoom:1; }
+		.search .form .submit:hover{ background:#F52B00; cursor:pointer; }
+		.search .adv-search{ float:left; width:24px; height:40px; margin-top:5px; padding-left:8px; }
+		.search .adv-search:hover{ color:#FF4400; }
+
+		.search ul{ margin-bottom:0; height:12px; }
+		.search li{ float:left; height:12px; margin:9px 9px 0 0; }
+		.search li a{ color:#666666; }
+		.search li a:hover{ color:#FF4400; }
+		.search .more{ margin-left:33px; }
+		.search .hot{ color:#FF4400; }
+		.search .hot-2{ color:#C60000; }
+		.search .hot-2:hover{ color:#C60000; }
+
+		/*第二个搜索框与第一个搜索框的不同样式*/
+		.search .title .active-2,.search .title .active-2:hover{ background:#C60000; }
+		.search .form .submit-2,.search .form .submit-2:hover{ background:#C40000; }
+		/*将后两个搜索框定位*/
+		.search .box-2,.search .box-3{ display: none; }
+		.search .box-2,.search .box-3{ position:absolute; top:25px; }
+	</style>
+	<script>
+		window.onload = function(){
+			var oSearch = document.getElementsByClassName('search')[0];
+
+			var oGoods = oSearch.getElementsByClassName('goods')[0];
+			var oTmall = oSearch.getElementsByClassName('tmall')[0];
+			var oStore = oSearch.getElementsByClassName('store')[0];
+
+			var oBox_1 = oSearch.getElementsByClassName('box-1')[0];
+			var oBox_2 = oSearch.getElementsByClassName('box-2')[0];
+			var oBox_3 = oSearch.getElementsByClassName('box-3')[0];
+
+			var val = null;//用于存储上次输入框里面的文字
+			//获取三个输入框
+			var aText = oSearch.getElementsByClassName('text');
+			//设输入框一打开页面就获得焦点
+			aText[0].focus();
+			//切换输入框
+			oGoods.onclick = function(){
+				removeClass(oTmall,'active');
+				removeClass(oTmall,'active-2');
+				removeClass(oStore,'active');
+				addClass(oGoods,'active');
+				oBox_1.style.display = 'block';
+				oBox_2.style.display = 'none';
+				oBox_3.style.display = 'none';
+				aText[0].focus();
+				aText[0].value = val;
+				if(aText[0].value != ''){
+					aText[0].style.background = '#fff';
+				}else{
+					aText[0].style.background = 'url(img/search/1.png) no-repeat 13px 11px';
+				}
+			}
+			oTmall.onclick = function(){
+				removeClass(oGoods,'active');
+				removeClass(oStore,'active');
+				addClass(oTmall,'active');
+				addClass(oTmall,'active-2');
+				oBox_1.style.display = 'none';
+				oBox_2.style.display = 'block';
+				oBox_3.style.display = 'none';
+				aText[1].focus();
+				aText[1].value = val;
+				if(aText[1].value != ''){
+					aText[1].style.background = '#fff';
+				}else{
+					aText[1].style.background = 'url(img/search/2.png) no-repeat 13px 11px';
+				}
+			}
+			oStore.onclick = function(){
+				removeClass(oGoods,'active');
+				removeClass(oTmall,'active');
+				removeClass(oTmall,'active-2');
+				addClass(oStore,'active');
+				oBox_1.style.display = 'none';
+				oBox_2.style.display = 'none';
+				oBox_3.style.display = 'block';
+				aText[2].focus();
+				aText[2].value = val;
+				if(aText[2].value != ''){
+					aText[2].style.background = '#fff';
+				}else{
+					aText[2].style.background = 'url(img/search/2.png) no-repeat 13px 11px';
+				}
+			}
+			//当输入框有文字的时候，清楚输入框里面的默认背景
+			for(var i=0; i<aText.length; i++){
+				aText.index = i;
+				aText[i].onkeyup = function(){
+					if(this.value != ''){
+						val = this.value
+						this.style.background = '#fff';
+					}else{
+						val = this.value;
+						if(this.index == 0){
+							this.style.background = 'url(img/search/1.png) no-repeat 13px 11px'//后面不要加分号，加了分号就不能将这个样式加上去了
+						}else{
+							this.style.background = 'url(img/search/2.png) no-repeat 13px 11px'
+						}
+					}
+				}
+			}
+
+		}
+		//添加class的函数addClass()
+		function addClass(obj,newClass){
+			var oldClass = obj.className;
+			//当元素的class为空的时候
+			if(oldClass == ""){
+				obj.className = newClass;
+				return false;
+			}
+			//当元素的class有的时候
+			var arr = oldClass.split(" ");//将字符串变为数组，其中字符串是以空格隔开
+			for(var i=0 ;i<arr.length;i++){
+				if(newClass == arr[i]){
+					return false;
+				}
+			}
+			arr.push(newClass);
+			obj.className = arr.join(" ");//join将数组变为字符串，每个元素以空格隔开
+		}
+		//删除class的函数removeClass
+		function removeClass(obj,old){
+			var oldClass = obj.className;
+			var arr = oldClass.split(" ");//split将字符串变为数组，其中字符串是以空格隔开
+			for(var i=0;i<arr.length;i++){
+				if(arr[i] == old){
+					arr.splice(i,1);
+					break;
+				}
+			}	
+			obj.className = arr.join(" ");//join将数组变为字符串，每个元素以空格隔开
+		}
+	</script>
+</head>
+<body>
+	<!-- 1 -->
+	<div class="search">
+		<p class="title clear">
+			<a class="goods active" href="#" javascript:;>宝贝</a>
+			<a class="tmall" href="#" javascript:;>天猫</a>
+			<a class="store" href="#" javascript:;>店铺</a>
+		</p>
+		<div class="box-1">
+			<form class="form clear" action="#">
+			<input class="text" type="text">
+			<span class="wrap iconfont icon-xiangji"><input class="file" type="file"></span>
+			<input class="submit" type="submit" value="搜索">
+			</form>
+			<a class="adv-search" href="#">高级搜索</a>
+			<ul class="clear">
+				<li><a class="hot" href="#">男休闲裤</a></li>
+				<li><a class="hot" href="#">月饼礼盒</a></li>
+				<li><a class="hot" href="#">男士T恤</a></li>
+				<li><a href="#">老人机</a></li>
+				<li><a class="hot" href="#">老人手机</a></li>
+				<li><a href="#">笔记本</a></li>
+				<li><a href="#">男装</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a href="#">男鞋</a></li>
+				<li><a href="#">时尚女包</a></li>
+				<li><a href="#">长袖女T恤</a></li>
+				<li><a href="#">男包</a></li>
+				<li class="more"><a href="#">更多></a></li>
+			</ul>
+		</div>
+		<div class="box-2">
+			<form class="form clear" action="#">
+			<input class="text text-2" type="text">
+			<input class="submit submit-2" type="submit" value="搜索">
+			</form>
+			<a class="adv-search" href="#">高级搜索</a>
+			<ul class="clear">
+				<li><a href="#">妈妈装</a></li>
+				<li><a class="hot-2" href="#">休闲裤男</a></li>
+				<li><a href="#">女鞋</a></li>
+				<li><a class="hot-2" href="#">笔记本电脑</a></li>
+				<li><a href="#">睡衣</a></li>
+				<li><a href="#">运动鞋</a></li>
+				<li><a class="hot-2" href="#">拉杆箱</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a class="hot-2" href="#">奶粉</a></li>
+				<li><a href="#">零食</a></li>
+				<li><a href="#">吹风机</a></li>
+				<li><a class="hot-2" href="#">避孕套</a></li>
+				<li><a href="#">双肩包</a></li>
+			</ul>
+		</div>	
+		<div class="box-3">
+			<form class="form clear" action="#">
+			<input class="text text-3" type="text">
+			<input class="submit" type="submit" value="搜索">
+			</form>
+			<a class="adv-search" href="#">高级搜索</a>
+			<ul class="clear">
+				<li><a class="hot" href="#">男休闲裤</a></li>
+				<li><a class="hot" href="#">月饼礼盒</a></li>
+				<li><a class="hot" href="#">男士T恤</a></li>
+				<li><a href="#">老人机</a></li>
+				<li><a class="hot" href="#">老人手机</a></li>
+				<li><a href="#">笔记本</a></li>
+				<li><a href="#">男装</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a href="#">男鞋</a></li>
+				<li><a href="#">时尚女包</a></li>
+				<li><a href="#">长袖女T恤</a></li>
+				<li><a href="#">男包</a></li>
+				<li class="more"><a href="#">更多></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 2 -->
+	<!-- <div class="search">
+		<p class="title clear">
+			<a class="goods" href="#" javascript:;>宝贝</a>
+			<a class="tmall active active-2" href="#" javascript:;>天猫</a>
+			<a class="store" href="#" javascript:;>店铺</a>
+		</p>
+		<div class="box-2">
+			<form class="form clear" action="#">
+			<input class="text-2" type="text">
+			<input class="submit submit-2" type="submit" value="搜索">
+			</form>
+			<a class="adv-search" href="#">高级搜索</a>
+			<ul class="clear">
+				<li><a href="#">妈妈装</a></li>
+				<li><a class="hot-2" href="#">休闲裤男</a></li>
+				<li><a href="#">女鞋</a></li>
+				<li><a class="hot-2" href="#">笔记本电脑</a></li>
+				<li><a href="#">睡衣</a></li>
+				<li><a href="#">运动鞋</a></li>
+				<li><a class="hot-2" href="#">拉杆箱</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a class="hot-2" href="#">奶粉</a></li>
+				<li><a href="#">零食</a></li>
+				<li><a href="#">吹风机</a></li>
+				<li><a class="hot-2" href="#">避孕套</a></li>
+				<li><a href="#">双肩包</a></li>
+			</ul>
+		</div>
+	</div> -->
+	<!-- 3 -->
+	<!-- <div class="search">
+		<p class="title clear">
+			<a class="goods" href="#" javascript:;>宝贝</a>
+			<a class="tmall" href="#" javascript:;>天猫</a>
+			<a class="store active" href="#" javascript:;>店铺</a>
+		</p>
+		<div class="box-3">
+			<form class="form clear" action="#">
+			<input class="text text-3" type="text">
+			<input class="submit" type="submit" value="搜索">
+			</form>
+			<a class="adv-search" href="#">高级搜索</a>
+			<ul class="clear">
+				<li><a class="hot" href="#">男休闲裤</a></li>
+				<li><a class="hot" href="#">月饼礼盒</a></li>
+				<li><a class="hot" href="#">男士T恤</a></li>
+				<li><a href="#">老人机</a></li>
+				<li><a class="hot" href="#">老人手机</a></li>
+				<li><a href="#">笔记本</a></li>
+				<li><a href="#">男装</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a href="#">男鞋</a></li>
+				<li><a href="#">时尚女包</a></li>
+				<li><a href="#">长袖女T恤</a></li>
+				<li><a href="#">男包</a></li>
+				<li class="more"><a href="#">更多></a></li>
+			</ul>
+		</div>	
+	</div> -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+.link-wrap{ width: 100%; height: 69px; background: #F1F1F1; margin-top: 20px; }
+.link{ width: 1190px; height: 69px; margin: 0 auto; border-bottom: 1px solid #DDDDDD; }
+.link *{ float: left; }
+.link a{ font-size: 12px; color: #6C6C6C; }
+.link a:hover{ color: #FF4400; }
+.link .iconfont{ color: #E0E0E0; }
+.link .ul-1{ margin: 15px 0 13px 4px; }
+.link .ul-2{ margin: 0 0 0 4px; }
